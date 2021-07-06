@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = 'http://triforce-trivia.herokuapp.com';
+const URL = 'https://fast-taiga-92693.herokuapp.com';
 
 export async function signup(email, password) {
     const data = await request
