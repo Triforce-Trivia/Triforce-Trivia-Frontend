@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+
+header {
+    color: white;
+}
+
+.Nav{
+    color: white;
+}
+
+.triv {
+    color: white;
+    background-color: white;
+}
