@@ -30,6 +30,7 @@ componentDidMount = () => {
             bgImage: `url(../../zombies/z${this.state.number}.gif)`,
         })
     }
+
     render() {
         console.log(this.state.number)
         return (
@@ -43,19 +44,8 @@ componentDidMount = () => {
                     overflow: "visible"
                     }}
                     >
-                    
-                    <button onClick={this.wrongAnswer}>False</button>
-                </div>
-                <div 
-                    style={{
-                    backgroundImage: this.state.bgImage,
-                    backgroundSize: "cover",
-                    height: "600px",
-                    backgroundRepeat: "no-repeat",
-                    overflow: "visible"
-                    }}
-                    >
                     <button onClick={this.rightAnswer}>True</button>
+                    <button onClick={this.wrongAnswer}>False</button>
                 </div>
         </div>
         )

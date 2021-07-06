@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './style/App.css';
 import Signin from './components/Signin.js';
 import Signup from './components/Signup.js';
-import AboutUs from './components/AboutUs.js';
+import AboutUs from './components/About.js';
 import Home from './components/Home.js';
 import Trivia from './components/Trivia.js';
 import Z1 from '../src/zombie/Z1.js';
@@ -16,7 +16,7 @@ import {
 export default class App extends Component {
   state = { token: localStorage.getItem('TOKEN') }
 
-login = (token) => {
+signin = (token) => {
   this.setState({ token })
   localStorage.setItem('TOKEN', token)
 }
@@ -33,37 +33,37 @@ login = (token) => {
           <Route 
               exact path='/' 
                 render={(routerProps) => <Home
-                  login={this.login} 
+                  signin={this.signin} 
                   {...routerProps}/>} 
                 />
           <Route 
             exact path='/signin' 
               render={(routerProps) => <Signin
-                login={this.login} 
+                signin={this.signin} 
                 {...routerProps}/>} 
               />
           <Route 
             exact path='/signup' 
               render={(routerProps) => <Signup
-                login={this.login} 
+                signin={this.signin} 
                 {...routerProps}/>} 
               />
           <Route 
             exact path='/about'               
             render={(routerProps) => <AboutUs
-              login={this.login} 
+              signin={this.signin} 
               {...routerProps}/>} 
               />
           <Route 
             exact path='/trivia' 
             render={(routerProps) => <Trivia
-              login={this.login} 
+              signin={this.signin} 
               {...routerProps}/>} 
               />
           <Route 
           exact path='/z1' 
             render={(routerProps) => <Z1
-              login={this.login} 
+              signin={this.signin} 
               {...routerProps}/>} 
             />
           </Switch>
