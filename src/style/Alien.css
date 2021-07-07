@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: black;
+}
+
+header {
+    color: white;
+}
+
+.triv {
+    color: white;
+}

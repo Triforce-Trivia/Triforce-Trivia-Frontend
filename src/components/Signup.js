@@ -34,7 +34,7 @@ export default class Signup extends Component {
                         Name
                         <input 
                         name="name"
-                        type={this.state.display_name}
+                        type="name"
                         text="name"
                         onChange={this.handleChange}
                         />
@@ -43,7 +43,7 @@ export default class Signup extends Component {
                         Email
                         <input 
                         name="email"
-                        type={this.state.email}
+                        type="email"
                         text="email"
                         onChange={this.handleChange}
                         />
@@ -52,7 +52,7 @@ export default class Signup extends Component {
                         Password
                         <input 
                         name="password"
-                        type={this.state.password}
+                        type="password"
                         text="password"
                         onChange={this.handleChange}
                         />
