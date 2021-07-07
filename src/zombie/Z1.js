@@ -76,7 +76,7 @@ export default class Z1 extends Component {
                 </div>
             )
             </div>
-          
+        
         </div>
         )
     }

@@ -7,7 +7,7 @@ export default class Trivia extends Component {
     render() {
         return (
             <div className="triv">
-
+                <h2>Welcome, user!</h2>
                 <button className="zombie"><Link to="/z1"><div>Z</div></Link></button>
 
                 <button onClick={this.handleAnswer} 
@@ -20,4 +20,3 @@ export default class Trivia extends Component {
         )
     }
 }
-
