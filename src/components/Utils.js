@@ -31,3 +31,15 @@ export async function logout() {
     })
     return data.body;
 }
+
+export async function getTrivia() {
+    const data = await request
+    .get(`${URL}/trivias`)
+    return data.body;
+}
+
+// export async function modifyQuestion(data) {
+//     const data = await request
+//     .get(`${URL}/trivias`)
+//     return data.body;
+// }

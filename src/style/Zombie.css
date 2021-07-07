@@ -2,9 +2,13 @@ body {
     display: flex;
     flex-direction: column;
     background-color: black;
-    color: white;
+    color: black;
 }
 
 header {
+    color: white;
+}
+
+.triv {
     color: white;
 }
