@@ -2,8 +2,8 @@ import '../style/Zombie.css';
 import React, { Component } from 'react';
 import { getTrivia } from '../components/Utils';
 import  ZDetailPage  from './ZDetailPage.js';
-import zombies from './Zombies.js';
-import { findById } from '../components/Fetch-Utils.js';
+// import zombies from './Zombies.js';
+// import { findById } from '../components/Fetch-Utils.js';
 
 export default class Z1 extends Component {
         state = {
@@ -55,7 +55,6 @@ export default class Z1 extends Component {
         })
     }
     
-   
 
     render() {
         console.log(this.state.questions.length, this.state.gameNumber)
