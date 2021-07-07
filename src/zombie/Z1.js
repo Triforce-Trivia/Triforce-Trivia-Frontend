@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
 import '../style/Zombie.css';
+import React, { Component } from 'react';
 import { getTrivia } from '../components/Utils';
+import  DetailPage  from './DetailPage.js'
 
 export default class Z1 extends Component {
         state = {
@@ -11,7 +12,9 @@ export default class Z1 extends Component {
             backgroundRepeat: "no-repeat",
             questions: [],
             correct_answer: "",
-            incorrect_answer: ""
+            incorrect_answer: "", 
+            gameNumber: 0, 
+            scores: 0 
         }
 
     componentDidMount = async() => {
@@ -23,7 +26,7 @@ export default class Z1 extends Component {
         })
         )
         this.setState({
-            questions: triviaquestions
+            questions: triviaquestions,
         })
     }
 
@@ -31,6 +34,7 @@ export default class Z1 extends Component {
         this.setState({
             number: this.state.number + 1,
             bgImage: `url(../../zombies/z${this.state.number}.gif)`,
+            gameNumber: this.state.gameNumber + 1
         })
     }
         
@@ -38,43 +42,41 @@ export default class Z1 extends Component {
         this.setState({
             number: this.state.number - 1,
             bgImage: `url(../../zombies/z${this.state.number}.gif)`,
+            gameNumber: this.state.gameNumber + 1
         })
     }
 
     render() {
-        console.log(this.state)
+        console.log(this.state.gameNumber)
         return (
         <div className="triv">
+            
             <div>
-            { this.state.questions.map(question => 
                 <div 
                 style={{
-                backgroundImage: this.state.bgImage,
-                backgroundSize: "cover",
-                height: "600px",
-                backgroundRepeat: "no-repeat",
-                overflow: "visible"
+                    backgroundImage: this.state.bgImage,
+                    backgroundSize: "cover",
+                    height: "600px",
+                    backgroundRepeat: "no-repeat",
+                    overflow: "visible"
                 }}
                 >
-                <h3>{question.question}</h3>
+                <h3>
+                    <DetailPage q={this.state.questions[this.state.gameNumber]} />
+                </h3>     
 
                 <button onClick={this.rightAnswer}>
                     {this.state.correct_answer}
                 </button>
 
-                <button onClick={this.wrongAnswer}>
-                    {this.state.incorrect_answer}
+                <button onClick={this.wrongAnswer} >
+                    {this.state.incorrect_answer} 
                 </button>
                 
                 </div>
             )
-    }
             </div>
-            
-                
-                    {/* <button onClick={this.rightAnswer}>{this.question.correct_answer}</button>
-                    <button onClick={this.wrongAnswer}>False</button> */}
-
+          
         </div>
         )
     }

@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+// import { useAuth0 } from '@auth0/auth0-react'
+import LoginButton from '../LoginButton.js'; 
+// import LogoutButton from '../LogoutButton.js';
 import '../style/Home.css';
 
 export default class Home extends Component {
+  
+
     render() {
+        // const AuthNav = () => {
+        //     const { isAuthenticated } = useAuth0(); 
+        // }
         return (
                 
                     <div className="Nav">
@@ -15,7 +23,12 @@ export default class Home extends Component {
         height: "100vh",
         }}
     >
-                    
+
+            <LoginButton />
+            {/* {isAuthenticated ? <LogoutButton /> : <LoginButton />}  */}
+
+
+
                     <button>
                         <Link to="/signup"><div>Sign up</div></Link>
                     </button>
