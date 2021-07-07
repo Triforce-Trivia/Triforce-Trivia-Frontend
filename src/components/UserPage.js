@@ -5,7 +5,10 @@ class UserPage extends Component {
     render() {
         return (
             <div>
-                User's page
+                <p>Name: {this.props.name}</p>
+                <p>Score: {this.props.score}</p>
+                <button>Home</button>
+                <button>Logout</button>
             </div>
         )
     }

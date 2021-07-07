@@ -2,18 +2,19 @@ import request from 'superagent';
 
 const URL = 'https://fast-taiga-92693.herokuapp.com';
 
-export async function signup(email, password, display_name) {
+
+export async function signup(display_name, email, password) {
     const data = await request
     .post(`${URL}/auth/signup`)
-    .send({
-        display_name: display_name,
+        .send({
+        name: display_name,
         email: email,
         password: password
     })
     return data.body.token;
 }
 
-export async function signin(display_name, email, password) {
+export async function signin(email, password) {
     const data = await request
     .post(`${URL}/auth/signin`)
     .send({
