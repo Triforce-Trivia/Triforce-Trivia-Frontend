@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-
 class DetailPage extends Component {
+    state = {
+        scores: 0, 
+    }
+
     render() {
-        console.log(this.props)
+        
         return (
             <div>
                 {
-                    this.props.q ?  this.props.q.question : null 
+                    this.props.q ?  this.props.q.question : null
                 }
             </div>
         )

@@ -30,24 +30,33 @@ export default class Z1 extends Component {
         })
     }
 
-    rightAnswer = (e) => {
-        this.setState({
-            number: this.state.number + 1,
-            bgImage: `url(../../zombies/z${this.state.number}.gif)`,
-            gameNumber: this.state.gameNumber + 1
-        })
-    }
-        
-    wrongAnswer = (e) => {
-        this.setState({
-            number: this.state.number - 1,
-            bgImage: `url(../../zombies/z${this.state.number}.gif)`,
-            gameNumber: this.state.gameNumber + 1
-        })
+
+    handleSummit = (e) => {
+        e.preventDefault(); 
     }
 
+    handleClick = (e) => {
+        if (this.state.questions.length - 1 === Math.abs(this.state.gameNumber)) { 
+            this.props.history.push('/userpage')
+        }
+        console.log(e.target.value, Math.abs(this.state.gameNumber))
+        e.target.value === this.state.correct_answer ? this.setState({
+            scores: this.state.scores + 1,
+            number: this.state.number + 1,
+            bgImage: `url(../../zombies/z${this.state.number}.gif)`,
+            gameNumber: this.state.gameNumber + 1, 
+        }) : this.setState({
+            scores: this.state.scores - 1,
+            number: this.state.number - 1,
+            bgImage: `url(../../zombies/z${this.state.number}.gif)`,
+            gameNumber: this.state.gameNumber - 1, 
+        })
+    }
+    
+   
+
     render() {
-        console.log(this.state.gameNumber)
+        console.log(this.state.questions.length, this.state.gameNumber)
         return (
         <div className="triv">
             
@@ -61,19 +70,31 @@ export default class Z1 extends Component {
                     overflow: "visible"
                 }}
                 >
+                <h2> {this.state.scores} </h2> 
                 <h3>
-                    <DetailPage q={this.state.questions[this.state.gameNumber]} />
+                    <DetailPage q={this.state.questions[Math.abs(this.state.gameNumber)]} />
                 </h3>     
-
-                <button onClick={this.rightAnswer}>
-                    {this.state.correct_answer}
-                </button>
-
-                <button onClick={this.wrongAnswer} >
-                    {this.state.incorrect_answer} 
-                </button>
-                
-                </div>
+                <form onSubmit={this.onSubmit}>
+                    <label>
+                        True
+                        <input 
+                        type='radio'
+                        value='True'
+                        name='answers'
+                        onClick={this.handleClick}
+                        />
+                    </label>
+                    <label>
+                        False
+                        <input 
+                            type='radio'
+                            value='False'
+                            name='answers'
+                            onClick={this.handleClick}
+                        /> 
+                    </label>
+                </form>
+            </div>
             )
             </div>
         
