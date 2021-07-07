@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../style/UserPage.css'
 
-export default class UserPage extends Component {
+class UserPage extends Component {
     render() {
         return (
             <div>
@@ -10,3 +10,5 @@ export default class UserPage extends Component {
         )
     }
 }
+
+export default UserPage
