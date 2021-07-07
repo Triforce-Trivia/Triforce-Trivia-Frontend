@@ -18,7 +18,6 @@ export async function signin(email, password) {
     const data = await request
     .post(`${URL}/auth/signin`)
     .send({
-        display_name: display_name,
         email: email,
         password: password
     })
