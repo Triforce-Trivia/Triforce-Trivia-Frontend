@@ -8,6 +8,7 @@ class UserPage extends Component {
                 <p>Name: {this.props.name}</p>
                 <p>Score: {this.props.score}</p>
                 <button>Home</button>
+                
                 <button>Logout</button>
             </div>
         )
