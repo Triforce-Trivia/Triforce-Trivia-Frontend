@@ -7,6 +7,8 @@ import UserPage from './components/UserPage';
 import Home from './components/Home.js';
 import Trivia from './components/Trivia.js';
 import Z1 from '../src/zombie/Z1.js';
+import A1 from '../src/alien/A1.js';
+import W1 from '../src/werewolf/W1.js';
 
 import {
   BrowserRouter as Router,
@@ -77,7 +79,18 @@ signin = (token) => {
             render={(routerProps) => this.state.token ? <Z1
               signin={this.signin} 
               {...routerProps}/>: <Redirect to='/' />} /> 
-  
+            <Route 
+          exact path='/a1' 
+            render={(routerProps) => <A1
+              signin={this.signin} 
+              {...routerProps}/>} 
+            />
+            <Route 
+          exact path='/w1' 
+            render={(routerProps) => <W1
+              signin={this.signin} 
+              {...routerProps}/>} 
+            />
           </Switch>
 
           <footer>

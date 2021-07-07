@@ -1,7 +1,7 @@
 import '../style/Zombie.css';
 import React, { Component } from 'react';
 import { getTrivia } from '../components/Utils';
-import  DetailPage  from './DetailPage.js'
+import  ZDetailPage  from './ZDetailPage.js'
 
 export default class Z1 extends Component {
         state = {
@@ -72,7 +72,7 @@ export default class Z1 extends Component {
                 >
                 <h2> {this.state.scores} </h2> 
                 <h3>
-                    <DetailPage q={this.state.questions[Math.abs(this.state.gameNumber)]} />
+                    <ZDetailPage q={this.state.questions[Math.abs(this.state.gameNumber)]} />
                 </h3>     
                 <form onSubmit={this.onSubmit}>
                     <label>

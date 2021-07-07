@@ -3,6 +3,7 @@ import { signup } from './Utils.js';
 
 export default class Signup extends Component {
     state = {
+        display_name: '',
         email: '',
         password: ''
     }
@@ -15,7 +16,7 @@ export default class Signup extends Component {
     handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const token = await signup(this.state.email, this.state.password)
+            const token = await signup(this.state.display_name, this.state.email, this.state.password)
             this.props.signin(token)
             this.props.history.push('/trivia')
         } catch (e) {
@@ -30,10 +31,19 @@ export default class Signup extends Component {
                 <form
                 onSubmit={this.handleSubmit}>
                     <label>
+                        Name
+                        <input 
+                        name="name"
+                        type="name"
+                        text="name"
+                        onChange={this.handleChange}
+                        />
+                    </label>
+                    <label>
                         Email
                         <input 
                         name="email"
-                        type={this.state.email}
+                        type="email"
                         text="email"
                         onChange={this.handleChange}
                         />
@@ -42,7 +52,7 @@ export default class Signup extends Component {
                         Password
                         <input 
                         name="password"
-                        type={this.state.password}
+                        type="password"
                         text="password"
                         onChange={this.handleChange}
                         />

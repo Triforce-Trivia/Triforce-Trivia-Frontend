@@ -14,6 +14,32 @@ header {
 }
 
 .triv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
-    background-color: white;
+    background-color: transparent;
+    height: 500px;
+    background-image: url('../style/triforce.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid white;
+}
+
+.zombie {
+    background-image: url('../style/Triforce-top.png');
+    position: fixed;
+    left: 450px;
+}
+
+.werewolf {
+    position: fixed;
+    right: 450px;
+}
+
+.alien {
+    position: fixed;
+    top: 450px;
 }
