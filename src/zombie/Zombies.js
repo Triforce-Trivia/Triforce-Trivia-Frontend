@@ -1,55 +1,48 @@
 const zombies = [
     {
         id: 1,
-        correct_answer: true,
-        url: "../../public/zombies/z1.gif"
+        url: "https://i.imgur.com/jIsHfiA.gifv"
     },
     {
         id: 2,
-        correct_answer: true,
-        url: "../../public/zombies/z2.gif"
+        url: "https://i.imgur.com/w9jnrBd.gifv"
     },
     {
         id: 3,
-        correct_answer: true,
-        url: "../../public/zombies/z3.gif"
+        url: "https://i.imgur.com/cPgYWbQ.gifv"
     },
     {
         id: 4,
-        correct_answer: true,
-        url: "../../public/zombies/z4.gif"
+        url: "https://i.imgur.com/87hJ05I.gifv"
     },
     {
         id: 5,
-        correct_answer: true,
-        url: "../../public/zombies/z5.gif"
+        url: "https://i.imgur.com/8Ftb7zx.gif"
     },
     {
         id: 6,
-        correct_answer: true,
-        url: "../../public/zombies/z6.gif"
+        url: "https://i.imgur.com/ioQU4kl.gifv"
     },
     {
         id: 7,
-        correct_answer: true,
-        url: "../../public/zombies/z7.gif"
+        url: "https://i.imgur.com/SC4kNjL.gifv"
     },
     {
         id: 8,
-        correct_answer: true,
-        url: "../../public/zombies/z8.gif"
+        url: "https://i.imgur.com/ESgo5ve.gifv"
     },
     {
         id: 9,
-        correct_answer: true,
-        url: "../../public/zombies/z9.gif"
+        url: "https://i.imgur.com/swmnBWq.gifv"
     },
     {
         id: 10,
-        correct_answer: true,
-        url: "../../public/zombies/z10.gif"
+        url: "https://i.imgur.com/0ljkW42.gifv"
+    },
+    {
+        id: 10,
+        url: "./z10.jpg"
     }
-    
     ];
     
     export default zombies
