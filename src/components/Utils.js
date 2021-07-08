@@ -18,7 +18,6 @@ export async function signin(email, password) {
     const data = await request
     .post(`${URL}/auth/signin`)
     .send({
-        display_name: display_name,
         email: email,
         password: password
     })
@@ -41,8 +40,6 @@ export async function getTrivia() {
     return data.body;
 }
 
-// export async function modifyQuestion(data) {
-//     const data = await request
-//     .get(`${URL}/trivias`)
-//     return data.body;
-// }
+export function matchId(id) {
+    
+}

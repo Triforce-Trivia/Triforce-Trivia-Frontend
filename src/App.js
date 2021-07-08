@@ -91,6 +91,18 @@ signin = (token) => {
               signin={this.signin} 
               {...routerProps}/>} 
             />
+            <Route 
+          exact path='/a1' 
+            render={(routerProps) => <A1
+              signin={this.signin} 
+              {...routerProps}/>} 
+            />
+            <Route 
+          exact path='/w1' 
+            render={(routerProps) => <W1
+              signin={this.signin} 
+              {...routerProps}/>} 
+            />
           </Switch>
 
           <footer>

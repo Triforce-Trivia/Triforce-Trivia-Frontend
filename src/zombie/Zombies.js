@@ -1,55 +1,73 @@
 const zombies = [
+    
     {
         id: 1,
-        correct_answer: true,
-        url: "../../public/zombies/z1.gif"
+        url: "https://i.imgur.com/0n6VBH0.gifv"
     },
     {
         id: 2,
-        correct_answer: true,
-        url: "../../public/zombies/z2.gif"
+        url: "https://i.imgur.com/KJGReKc.gifv"
     },
     {
         id: 3,
-        correct_answer: true,
-        url: "../../public/zombies/z3.gif"
+        url: "https://i.imgur.com/JNVkKfY.gifv"
     },
     {
         id: 4,
-        correct_answer: true,
-        url: "../../public/zombies/z4.gif"
+        url: "https://i.imgur.com/0ZkGkzU.gifv"
     },
     {
         id: 5,
-        correct_answer: true,
-        url: "../../public/zombies/z5.gif"
+        url: "https://i.imgur.com/x0vezGB.gifv"
     },
     {
         id: 6,
-        correct_answer: true,
-        url: "../../public/zombies/z6.gif"
+        url: "https://i.imgur.com/JQEOqrU.gifv"
     },
     {
         id: 7,
-        correct_answer: true,
-        url: "../../public/zombies/z7.gif"
+        url: "https://i.imgur.com/djlsnsq.gifv"
     },
     {
         id: 8,
-        correct_answer: true,
-        url: "../../public/zombies/z8.gif"
+        url: "https://i.imgur.com/"
     },
     {
-        id: 9,
-        correct_answer: true,
-        url: "../../public/zombies/z9.gif"
+        id: 0,
+        url: "https://i.imgur.com/pqfHf2s.gifv"
     },
     {
-        id: 10,
-        correct_answer: true,
-        url: "../../public/zombies/z10.gif"
+        id: -1,
+        url: "https://i.imgur.com/jIsHfiA.gifv"
+    },
+    {
+        id: -2,
+        url: "https://i.imgur.com/cPgYWbQ.gifv"
+    },
+    {
+        id: -3,
+        url: "https://i.imgur.com/87hJ05I.gifv"
+    },
+    {
+        id: -4,
+        url: "https://i.imgur.com/ioQU4kl.gifv"
+    },
+    {
+        id: -5,
+        url: "https://i.imgur.com/SC4kNjL.gifv"
+    },
+    {
+        id: -6,
+        url: "https://i.imgur.com/ESgo5ve.gifv"
+    },
+    {
+        id: -7,
+        url: "https://i.imgur.com/swmnBWq.gifv"
+    },
+    {
+        id: -8,
+        url: "https://i.imgur.com/0ljkW42.gifv"
     }
-    
     ];
     
     export default zombies
