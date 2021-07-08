@@ -23,11 +23,8 @@ export default class Home extends Component {
                     <section className="title-section">
                          <img className="scooby-logo" src="../scoobydoo/scoobydoo_logo3.png" alt="scoobydoo-logo"></img>
                         <h3>Triforce Trivia</h3>
-                    </section>
-                   
-                </div>
-              
-                <div className="button-div">
+                        <img className="the-gang" alt="scooby-gang" src="../scoobydoo/scooby-doo-1-logo.png"></img>
+                         <div className="button-div">
                         <button>
                             <Link to="/signup"><div>Sign up</div></Link>
                         </button>
@@ -38,6 +35,8 @@ export default class Home extends Component {
                             <Link to="/trivia"><div>Play As Guest</div></Link>
                                     </button>
                     </div>
+                    </section>
+                </div>
             </div>  
         )
     }
