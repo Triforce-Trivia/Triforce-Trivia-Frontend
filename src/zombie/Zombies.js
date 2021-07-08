@@ -10,23 +10,23 @@ const zombies = [
     },
     {
         id: 3,
-        url: "https://i.imgur.com/"
+        url: "https://i.imgur.com/JNVkKfY.gifv"
     },
     {
         id: 4,
-        url: "https://i.imgur.com/"
+        url: "https://i.imgur.com/0ZkGkzU.gifv"
     },
     {
         id: 5,
-        url: "https://i.imgur.com/VNtxHH0.gifv"
+        url: "https://i.imgur.com/x0vezGB.gifv"
     },
     {
         id: 6,
-        url: "https://i.imgur.com/"
+        url: "https://i.imgur.com/JQEOqrU.gifv"
     },
     {
         id: 7,
-        url: "https://i.imgur.com/"
+        url: "https://i.imgur.com/djlsnsq.gifv"
     },
     {
         id: 8,
@@ -50,26 +50,22 @@ const zombies = [
     },
     {
         id: -4,
-        url: "https://i.imgur.com/8Ftb7zx.gif"
-    },
-    {
-        id: -5,
         url: "https://i.imgur.com/ioQU4kl.gifv"
     },
     {
-        id: -6,
+        id: -5,
         url: "https://i.imgur.com/SC4kNjL.gifv"
     },
     {
-        id: -7,
+        id: -6,
         url: "https://i.imgur.com/ESgo5ve.gifv"
     },
     {
-        id: -8,
+        id: -7,
         url: "https://i.imgur.com/swmnBWq.gifv"
     },
     {
-        id: -10,
+        id: -8,
         url: "https://i.imgur.com/0ljkW42.gifv"
     }
     ];
