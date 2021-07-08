@@ -1,41 +1,42 @@
 const zombies = [
-    
     {
-        id: 1,
-        url: "https://i.imgur.com/0n6VBH0.gifv"
-    },
-    {
-        id: 2,
-        url: "https://i.imgur.com/KJGReKc.gifv"
-    },
-    {
-        id: 3,
-        url: "https://i.imgur.com/JNVkKfY.gifv"
-    },
-    {
-        id: 4,
-        url: "https://i.imgur.com/0ZkGkzU.gifv"
-    },
-    {
-        id: 5,
-        url: "https://i.imgur.com/x0vezGB.gifv"
-    },
-    {
-        id: 6,
-        url: "https://i.imgur.com/JQEOqrU.gifv"
+        id: 8,
+        url: "https://i.imgur.com/sVAbgoX.gifv"
     },
     {
         id: 7,
         url: "https://i.imgur.com/djlsnsq.gifv"
     },
     {
-        id: 8,
-        url: "https://i.imgur.com/"
+        id: 6,
+        url: "https://i.imgur.com/JQEOqrU.gifv"
     },
+    {
+        id: 5,
+        url: "https://i.imgur.com/x0vezGB.gifv"
+    },
+    {
+        id: 4,
+        url: "https://i.imgur.com/0ZkGkzU.gifv"
+    },
+    {
+        id: 3,
+        url: "https://i.imgur.com/JNVkKfY.gifv"
+    },
+    {
+        id: 2,
+        url: "https://i.imgur.com/KJGReKc.gifv"
+    },
+    {
+        id: 1,
+        url: "https://i.imgur.com/0n6VBH0.gifv"
+    },
+
     {
         id: 0,
         url: "https://i.imgur.com/pqfHf2s.gifv"
     },
+    
     {
         id: -1,
         url: "https://i.imgur.com/jIsHfiA.gifv"
