@@ -1,4 +1,4 @@
-import '../style/Zombie.css';
+import '../style/Werewolf.css';
 import React, { Component } from 'react';
 import { getWereWolves } from '../Utils';
 import  WDetailPage  from './WDetailPage.js';
