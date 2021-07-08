@@ -40,6 +40,8 @@ export async function getTrivia() {
     return data.body;
 }
 
-export function matchId(id) {
-    
-}
+// export async function quoteFix(questions) {
+//     const replaced = '"'
+//     const triviaquestions = questions.replace(/&quot;/g, replaced)
+//     return triviaquestions;
+// } 

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import '../style/Home.css';
 
 export default class Home extends Component {
-  
     render() {
         return (        
             <div >
@@ -21,10 +20,10 @@ export default class Home extends Component {
                 justifyContent: "center"
                     }}>
                     <section className="title-section">
-                         <img className="scooby-logo" src="../scoobydoo/scoobydoo_logo3.png" alt="scoobydoo-logo"></img>
+                        <img className="scooby-logo" src="../scoobydoo/scoobydoo_logo3.png" alt="scoobydoo-logo"></img>
                         <h3>Triforce Trivia</h3>
                         <img className="the-gang" alt="scooby-gang" src="../scoobydoo/scooby-doo-1-logo.png"></img>
-                         <div className="button-div">
+                        <div className="button-div">
                         <button>
                             <Link to="/signup"><div>Sign up</div></Link>
                         </button>
@@ -33,7 +32,7 @@ export default class Home extends Component {
                         </button>
                         <button>
                             <Link to="/trivia"><div>Play As Guest</div></Link>
-                                    </button>
+                        </button>
                     </div>
                     </section>
                 </div>
