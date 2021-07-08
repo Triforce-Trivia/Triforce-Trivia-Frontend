@@ -73,7 +73,6 @@ signin = (token) => {
               signin={this.signin} 
               {...routerProps}/>: <Redirect to='/' />} /> 
   
-
           <Route 
           exact path='/z1' 
             render={(routerProps) => this.state.token ? <Z1
