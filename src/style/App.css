@@ -27,8 +27,14 @@ html, body {
     width: 100%;
 }
 
+/* .Nav  {
+    display: grid;
+    grid-template-areas: 150px 1fr 75px / 1fr;
+    background-color: black;
+} */
+
 header {
-  height: 195px;
+  height: 150px;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -37,17 +43,11 @@ header {
 }
 
 img {
+  /* border: solid 3px blanchedalmond; */
   width: 500px;
   height: auto;
   margin-bottom: -160px;
   margin-left: -150px;
-}
-
-h1 {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 200px;
-  margin-top:  -55px;
 }
 
 .title-logo {

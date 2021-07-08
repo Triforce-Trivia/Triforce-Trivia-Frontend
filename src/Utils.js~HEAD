@@ -3,11 +3,11 @@ import request from 'superagent';
 const URL = 'https://triforce-trivia.herokuapp.com';
 
 
-export async function signup(name, email, password) {
+export async function signup(display_name, email, password) {
     const data = await request
     .post(`${URL}/auth/signup`)
         .send({
-        display_name: name,
+        name: display_name,
         email: email,
         password: password
     })
@@ -40,6 +40,7 @@ export async function getTrivia() {
     return data.body;
 }
 
+<<<<<<< HEAD:src/Utils.js
 
 export async function getZombies() {
     const data = await request
@@ -48,12 +49,13 @@ export async function getZombies() {
 }
 
 
-export async function getWereWolves() {
-    const data = await request
-    .get(`${URL}/wereWolves`)
-    return data.body;
-}
 
 
 
-
+=======
+// export async function quoteFix(questions) {
+//     const replaced = '"'
+//     const triviaquestions = questions.replace(/&quot;/g, replaced)
+//     return triviaquestions;
+// } 
+>>>>>>> 7c358c2c241e1bacd2ed61db042f1456c1bd859c:src/components/Utils.js

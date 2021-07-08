@@ -14,7 +14,7 @@ export default class Header extends Component {
               <p className="signup-link"><Link to="/signup">Sign Up</Link></p>
               <p className="userpage-link"><Link to="/userpage">Scores</Link></p>
               <p className="about-link"><Link to="/about">About Us</Link> </p>
-               <p className="logout-link"><Link to="/">Log Out</Link></p>
+                <p className="logout-link"><Link to="/logout">Log Out</Link></p>
             </header>
             </div>
             </div>

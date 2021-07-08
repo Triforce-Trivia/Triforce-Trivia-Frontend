@@ -11,6 +11,7 @@ export default class Signup extends Component {
     handleChange = (e) => {
         const {name, value} = e.target
         this.setState({ [name]: value })
+        this.props.setUserName(this.state.display_name)
     }
 
     handleSubmit = async (e) => {
@@ -18,46 +19,47 @@ export default class Signup extends Component {
         try {
             const token = await signup(this.state.display_name, this.state.email, this.state.password)
             this.props.signin(token)
-            this.props.history.push('/trivia')
+            this.props.history.push('/userpage')
         } catch (e) {
             console.log(e.message)
         }
+        // this.props.setUserName(this.state.display_name)
     }
 
     render() {
+        console.log(this.state.display_name)
         return (
         <div>
         <div className="Nav">
-                <form
-                onSubmit={this.handleSubmit}>
+                <form onSubmit = {this.handleSubmit}>
                     <label>
                         Name
                         <input 
-                        name="name"
-                        type="name"
-                        text="name"
-                        onChange={this.handleChange}
+                            name="display_name"
+                            type='text'
+                            value={this.state.display_name}
+                            onChange={this.handleChange}
                         />
                     </label>
                     <label>
                         Email
                         <input 
-                        name="email"
-                        type="email"
-                        text="email"
-                        onChange={this.handleChange}
+                            name="email"
+                            type="email"
+                            text="email"
+                            onChange={this.handleChange}
                         />
                     </label>
                     <label>
                         Password
                         <input 
-                        name="password"
-                        type="password"
-                        text="password"
-                        onChange={this.handleChange}
+                            name="password"
+                            type="password"
+                            text="password"
+                            onChange={this.handleChange}
                         />
                     </label>
-                    <button>Sign Up</button>
+                    <button >Sign Up</button>
                 </form>
                 </div>
             </div>

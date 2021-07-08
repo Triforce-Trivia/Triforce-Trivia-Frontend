@@ -6,8 +6,6 @@ import zombies from './Zombies.js';
 import zs from './BadZ'
 export default class Z1 extends Component {
         state = {
-            // number: 0,
-            // gameNumber: 0, 
             bgImage: "https://i.imgur.com/jIsHfiA.gif",
             backgroundSize: "cover",
             height: "600px",
@@ -34,40 +32,31 @@ export default class Z1 extends Component {
     }
 
 
-    // handleSubmit = (e) => {
-    //     try {
-    //         this.props.getScores(this.state.scores)
-    //     }
-    //     catch (e) {
-    //         console.log(e.message)
-    //     }
-    // }
-
     handleClick = (e) => {
-        if (this.state.questions.length - 1 === Math.abs(this.state.gameNumber)) { 
+        if (this.state.questions.length - 1 === Math.abs(this.state.abs)) { 
             this.props.history.push('/userpage')
         }
         if (this.state.life === 0) {
             this.props.history.push('/gameover')
         }
         console.log(e.target.value, this.state.questions[this.state.abs])
-        e.target.value === this.state.questions[this.state.abs].correct_answer ? this.setState({
-            scores: this.state.scores + 1,
-            bgImage: `${this.state.zombies[Math.abs(this.state.scores)].url}`,
-            abs: this.state.abs + 1, 
-            // gameNumber: this.state.gameNumber + 1, 
-            // number: this.state.number + 1,
-        }) : this.setState({
-            scores: this.state.scores - 1,
-            bgImage: `${this.state.zs[Math.abs(this.state.scores)].url}`,
-            abs: this.state.abs + 1, 
-            life: this.state.life - 1, 
-            // number: this.state.number - 1,
-            // gameNumber: this.state.gameNumber - 1, 
-        })
-        this.props.getScores(this.state.scores)
-    }
 
+        if (e.target.value === this.state.questions[this.state.abs].correct_answer) {
+            this.setState({
+                scores: this.state.scores + 1,
+                bgImage: `${this.state.zombies[Math.abs(this.state.scores)].url}`,
+                abs: this.state.abs + 1, 
+            })
+            this.props.getScores(1)
+        } else {
+            this.setState({
+                scores: this.state.scores - 1,
+                bgImage: `${this.state.zs[Math.abs(this.state.scores)].url}`,
+                abs: this.state.abs + 1, 
+                life: this.state.life - 1, 
+            })
+        }        
+    }
     
 
     render() {
