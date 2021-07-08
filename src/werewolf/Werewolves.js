@@ -1,35 +1,31 @@
 const werewolves = [
     {
-        id: 8,
+        id: 7,
         url: "https://i.imgur.com/kjhnIWo.gif"
     },
     {
-        id: 7,
+        id: 6,
         url: "https://i.imgur.com/1grLwbr.gif"
     },
     {
-        id: 6,
+        id: 5,
         url: "https://i.imgur.com/epJhLgE.gif"
     },
     {
-        id: 5,
+        id: 4,
         url: "https://i.imgur.com/58XEws4.gif"
     },
     {
-        id: 4,
+        id: 3,
         url: "https://i.imgur.com/9kv6VKF.gif"
     },
     {
-        id: 3,
+        id: 2,
         url: "https://i.imgur.com/Lrs1MPh.gif"
     },
     {
-        id: 2,
-        url: "https://i.imgur.com/jw6pqoz.gif"
-    },
-    {
         id: 1,
-        url: "https://i.imgur.com/c8WxkkQ.gif"
+        url: "https://i.imgur.com/jw6pqoz.gif"
     },
 
     {
@@ -55,19 +51,15 @@ const werewolves = [
     },
     {
         id: -5,
-        url: "https://i.imgur.com/20tU6Oy.gif"
-    },
-    {
-        id: -6,
         url: "https://i.imgur.com/p43vTbG.gif"
     },
     {
-        id: -7,
+        id: -6,
         url: "https://i.imgur.com/LFR1gvt.gif"
     },
     {
-        id: -8,
-        url: "https://i.imgur.com/3tPA6R5.gif"
+        id: -7,
+        url: "https://i.imgur.com/UH2h1Uk.gif"
     }
     ];
     
