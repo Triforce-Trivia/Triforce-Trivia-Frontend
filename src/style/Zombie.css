@@ -3,6 +3,8 @@ body {
     flex-direction: column;
     background-color: black;
     color: black;
+    align-items: center;
+    justify-content: ;
 }
 
 header {
@@ -11,4 +13,11 @@ header {
 
 .triv {
     color: white;
+}
+
+.freddy {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+
 }

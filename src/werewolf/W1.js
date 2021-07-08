@@ -74,7 +74,7 @@ export default class W1 extends Component {
                 </button>
                 
                 </div>
-            )
+            
             </div>
         
         </div>

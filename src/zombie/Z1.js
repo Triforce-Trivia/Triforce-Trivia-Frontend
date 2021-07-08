@@ -62,6 +62,7 @@ export default class Z1 extends Component {
         <div className="triv">
             
             <div>
+                
                 <div 
                 style={{
                     backgroundImage: this.state.bgImage,
@@ -74,7 +75,9 @@ export default class Z1 extends Component {
                 <h2> {this.state.scores} </h2> 
                 <h3>
                     <ZDetailPage q={this.state.questions[Math.abs(this.state.gameNumber)]} />
-                </h3>     
+                </h3>   
+                <div>
+                </div> 
                 <form onSubmit={this.onSubmit}>
                     <label>
                         True
@@ -95,8 +98,9 @@ export default class Z1 extends Component {
                         /> 
                     </label>
                 </form>
+
             </div>
-            )
+
             </div>
         
         </div>
