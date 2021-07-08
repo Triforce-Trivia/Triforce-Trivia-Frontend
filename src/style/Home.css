@@ -8,13 +8,30 @@
 h3 {
     border: yellow solid 2px;
     font-family: triforce;
-    font-size: 3.5em;
+    font-size: 3em;
     text-align: center;
+    margin-top: 15px;
 }
 
 .button-div {
+    border: turquoise 2px solid;
+    height: 50%;
+    width: 800px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px
+    margin 20px;
+}
+
+button {
+    background: url(./dog_bone2.png) center no-repeat;
+    background-size: 150px;
+    border: transparent;
+    cursor: pointer;
+    width: 150px;
+    height: 100px;
+    font-family: scooby doo;
 }
 
 .title-section {
@@ -34,4 +51,9 @@ h3 {
 
 .bk_Img {
     border: orange solid 2px;
+}
+
+.the-gang {
+    margin-left: unset;
+    margin-bottom: unset;
 }
