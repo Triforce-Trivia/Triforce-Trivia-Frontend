@@ -1,6 +1,6 @@
-body {
-    display: flex;
-    flex-direction: column;
+.Nav  {
+    display: grid;
+    grid-template-areas: 125px 1fr 75px / 1fr 1fr 1fr 1fr;
     background-color: black;
 }
 
@@ -8,7 +8,6 @@ h3 {
     font-family: triforce;
     font-size: 3.5em;
     display: flex;
-    justify-self: flex-start;
 }
 
 .button-div {
@@ -19,9 +18,10 @@ h3 {
 .title-section {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .scooby-logo {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 }

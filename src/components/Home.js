@@ -8,7 +8,8 @@ export default class Home extends Component {
   
     render() {
         return (        
-        <div className="Nav">
+            <div className="Nav">
+                
             <div
             className="bk_Img"
             style={{
@@ -18,12 +19,14 @@ export default class Home extends Component {
                 height: "100vh",
                 display: "flex",
                 justifyContent: "center"
-                    }}>                    
-                </div>
-                <section className="title-section">
-                        <img className="scooby-logo" src="../scoobydoo/scoobydoo_logo3.png" alt="scoobydoo-logo"></img>
+                    }}>
+                    <section className="title-section">
+                         <img className="scooby-logo" src="../scoobydoo/scoobydoo_logo3.png" alt="scoobydoo-logo"></img>
                         <h3>Triforce Trivia</h3>
                     </section>
+                   
+                </div>
+              
                 <div className="button-div">
                         <button>
                             <Link to="/signup"><div>Sign up</div></Link>
