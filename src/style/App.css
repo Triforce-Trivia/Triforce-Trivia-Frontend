@@ -43,6 +43,7 @@ header {
 }
 
 img {
+  /* border: solid 3px blanchedalmond; */
   width: 500px;
   height: auto;
   margin-bottom: -160px;

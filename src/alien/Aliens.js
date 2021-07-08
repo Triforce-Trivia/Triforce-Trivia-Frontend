@@ -26,7 +26,7 @@ const aliens = [
     },
     {
         id: 1,
-        url: "https://i.imgur.com/"
+        url: "https://i.imgur.com/76cImzd.gif"
     },
 
     {

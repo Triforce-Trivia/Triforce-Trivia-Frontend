@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Interweave from 'interweave';
 
 class WDetailPage extends Component {
     render() {
         console.log(this.props)
         return (
             <div>
+                <Interweave conrent=
                 {
                     this.props.q ?  this.props.q.question : null 
                 }
+                />
             </div>
         )
     }
