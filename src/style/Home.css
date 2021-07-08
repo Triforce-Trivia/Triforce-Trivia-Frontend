@@ -1,14 +1,15 @@
-body {
-    display: flex;
-    flex-direction: column;
+.Nav  {
+    border: peachpuff 4px solid;
+    display: grid;
+    grid-template-areas: 125px 1fr 75px / 1fr 1fr 1fr 1fr;
     background-color: black;
 }
 
 h3 {
+    border: yellow solid 2px;
     font-family: triforce;
     font-size: 3.5em;
-    display: flex;
-    justify-self: flex-start;
+    text-align: center;
 }
 
 .button-div {
@@ -17,11 +18,20 @@ h3 {
 }
 
 .title-section {
+    border: red solid 2px;
+    width: fit-content;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* align-items: flex-start; */
 }
 
 .scooby-logo {
-    display: flex;
-    justify-content: center;
+    border: blue solid 2px;
+    margin-left: unset;
+    margin-bottom: unset;
+}
+
+.bk_Img {
+    border: orange solid 2px;
 }
