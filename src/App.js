@@ -102,7 +102,7 @@ signin = (token) => {
             />
           </Switch>
 
-          <footer>
+          <footer className="footer">
             <Link to="/about">About Us</Link> 
           </footer>
 

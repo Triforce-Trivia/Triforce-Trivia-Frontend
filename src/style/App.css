@@ -23,7 +23,7 @@
 }
 
 html, body {
-    height: auto;
+    height: 100%;
     width: 100%;
 }
 
@@ -40,14 +40,14 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   font-family: triforce;
+  font-size: 2rem;
+  margin-bottom: 25px;
 }
 
-img {
+.triforce-logo {
   /* border: solid 3px blanchedalmond; */
-  width: 500px;
+  width: 650px;
   height: auto;
-  margin-bottom: -160px;
-  margin-left: -150px;
 }
 
 .title-logo {
@@ -57,36 +57,47 @@ img {
 
 .logout-link {
   position: absolute;
-  right: 415px;
-  top: 125px;
+  right: 200px;
+  top: 100px;
 }
 
 .about-link {
   position: absolute;
-  right: 475px;
-  top: 125px;
+  right: 315px;
+  top: 100px;
 }
 
 .userpage-link {
   position: absolute;
-  right: 540px;
-  top: 125px;
+  right: 445px;
+  top: 100px;
 }
 
 .signup-link {
   position: absolute;
-  right: 590px;
-  top: 125px;
+  right: 540px;
+  top: 100px;
 }
 
 .signin-link {
   position: absolute;
   right: 645px;
-  top: 125px;
+  top: 100px;
 }
 
 .home-link {
   position: absolute;
-  right: 700px;
-  top: 125px;
+  right: 750px;
+  top: 100px;
+} 
+
+.footer {
+  /* border: solid turquoise 3px; */
+  font-family: triforce;
+  font-size: 2rem;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
