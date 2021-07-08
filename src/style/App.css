@@ -23,13 +23,13 @@
 }
 
 html, body {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 header {
-  height: 150px;
-  width: 80%;
+  height: 195px;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -57,36 +57,36 @@ h1 {
 
 .logout-link {
   position: absolute;
-  right: 60px;
+  right: 415px;
   top: 125px;
 }
 
 .about-link {
   position: absolute;
-  right: 120px;
+  right: 475px;
   top: 125px;
 }
 
 .userpage-link {
   position: absolute;
-  right: 190px;
+  right: 540px;
   top: 125px;
 }
 
 .signup-link {
   position: absolute;
-  right: 245px;
+  right: 590px;
   top: 125px;
 }
 
 .signin-link {
   position: absolute;
-  right: 305px;
+  right: 645px;
   top: 125px;
 }
 
 .home-link {
   position: absolute;
-  right: 360px;
+  right: 700px;
   top: 125px;
 }
