@@ -1,70 +1,85 @@
 import '../style/Zombie.css';
 import React, { Component } from 'react';
-import { getTrivia } from '../components/Utils';
+import { getZombies } from '../Utils';
 import  ZDetailPage  from './ZDetailPage.js';
-// import zombies from './Zombies.js';
-// import { findById } from '../components/Fetch-Utils.js';
-
+import zombies from './Zombies.js';
+import zs from './BadZ'
 export default class Z1 extends Component {
         state = {
-            number: 0,
-            bgImage: "url(../../zombies/z0.gif)",
+            // number: 0,
+            // gameNumber: 0, 
+            bgImage: "https://i.imgur.com/jIsHfiA.gif",
             backgroundSize: "cover",
             height: "600px",
             backgroundRepeat: "no-repeat",
             questions: [],
             correct_answer: "",
             incorrect_answer: "", 
-            gameNumber: 0, 
-            scores: 0 
+            scores: 0, 
+            zombies, 
+            zs,
+            abs: 0, 
+            life: 3, 
         }
 
     componentDidMount = async() => {
-        const triviaquestions = await getTrivia();
+        const triviaquestions = await getZombies();
         
-        triviaquestions.map(tquestion => this.setState({
-            correct_answer: tquestion.correct_answer,
-            incorrect_answer: tquestion.incorrect_answer,
-        })
-        )
         this.setState({
             questions: triviaquestions,
+            zombies,  
+            zs,
+            bgImage: "url(https://i.imgur.com/jIsHfiA.gif)"
         })
     }
 
 
-    handleSummit = (e) => {
-        e.preventDefault(); 
-    }
+    // handleSubmit = (e) => {
+    //     try {
+    //         this.props.getScores(this.state.scores)
+    //     }
+    //     catch (e) {
+    //         console.log(e.message)
+    //     }
+    // }
 
     handleClick = (e) => {
         if (this.state.questions.length - 1 === Math.abs(this.state.gameNumber)) { 
             this.props.history.push('/userpage')
         }
-        console.log(e.target.value, Math.abs(this.state.gameNumber))
-        e.target.value === this.state.correct_answer ? this.setState({
+        if (this.state.life === 0) {
+            this.props.history.push('/gameover')
+        }
+        console.log(e.target.value, this.state.questions[this.state.abs])
+        e.target.value === this.state.questions[this.state.abs].correct_answer ? this.setState({
             scores: this.state.scores + 1,
-            number: this.state.number + 1,
-            bgImage: `url(../../zombies/z${this.state.number}.gif)`,
-            gameNumber: this.state.gameNumber + 1, 
+            bgImage: `${this.state.zombies[Math.abs(this.state.scores)].url}`,
+            abs: this.state.abs + 1, 
+            // gameNumber: this.state.gameNumber + 1, 
+            // number: this.state.number + 1,
         }) : this.setState({
             scores: this.state.scores - 1,
-            number: this.state.number - 1,
-            bgImage: `url(../../zombies/z${this.state.number}.gif)`,
-            gameNumber: this.state.gameNumber - 1, 
+            bgImage: `${this.state.zs[Math.abs(this.state.scores)].url}`,
+            abs: this.state.abs + 1, 
+            life: this.state.life - 1, 
+            // number: this.state.number - 1,
+            // gameNumber: this.state.gameNumber - 1, 
         })
+        this.props.getScores(this.state.scores)
     }
+
     
 
     render() {
-        console.log(this.state.questions.length, this.state.gameNumber)
+        console.log(this.state.questions)
+        console.log(this.state.questions[this.state.abs])
+        console.log(this.state.scores)
         return (
         <div className="triv">
-            
             <div>
                 <div 
                 style={{
-                    backgroundImage: this.state.bgImage,
+                    backgroundImage: `url(${this.state.bgImage})`,
                     backgroundSize: "cover",
                     height: "600px",
                     backgroundRepeat: "no-repeat",
@@ -73,9 +88,9 @@ export default class Z1 extends Component {
                 >
                 <h2> {this.state.scores} </h2> 
                 <h3>
-                    <ZDetailPage q={this.state.questions[Math.abs(this.state.gameNumber)]} />
+                    <ZDetailPage q={this.state.questions[this.state.abs]} />
                 </h3>     
-                <form onSubmit={this.onSubmit}>
+                <form>
                     <label>
                         True
                         <input 
@@ -96,10 +111,8 @@ export default class Z1 extends Component {
                     </label>
                 </form>
             </div>
-            )
-            </div>
-        
         </div>
+    </div>
         )
     }
 }

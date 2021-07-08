@@ -6,6 +6,7 @@ import AboutUs from './components/About.js';
 import UserPage from './components/UserPage';
 import Home from './components/Home.js';
 import Trivia from './components/Trivia.js';
+import GameOver from './components/GameOver';
 import Z1 from '../src/zombie/Z1.js';
 import A1 from '../src/alien/A1.js';
 import W1 from '../src/werewolf/W1.js';
@@ -19,14 +20,25 @@ import {
 } from "react-router-dom";
 
 export default class App extends Component {
-  state = { token: localStorage.getItem('TOKEN') }
+  state = { 
+    token: localStorage.getItem('TOKEN'), 
+    scores: 0
+  }
 
 signin = (token) => {
   this.setState({ token })
   localStorage.setItem('TOKEN', token)
 }
 
+getScores = (scores) => {
+  this.setState({
+    scores
+  })
+}
+
+
   render() {
+    console.log(this.state.scores)
     return (
 
       <div className="Nav">
@@ -72,12 +84,19 @@ signin = (token) => {
             render={(routerProps) => this.state.token ? <UserPage
               signin={this.signin} 
               {...routerProps}/>: <Redirect to='/' />} /> 
+          
+          <Route 
+            exact path='/gameover'
+            render={(routerProps) => this.state.token ? <GameOver
+              signin={this.signin} 
+              {...routerProps}/>: <Redirect to='/' />} /> 
+  
   
 
           <Route 
           exact path='/z1' 
             render={(routerProps) => this.state.token ? <Z1
-              signin={this.signin} 
+              signin={this.signin} getScores={this.getScores}
               {...routerProps}/>: <Redirect to='/' />} /> 
             <Route 
           exact path='/a1' 

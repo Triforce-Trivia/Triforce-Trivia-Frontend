@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = 'https://fast-taiga-92693.herokuapp.com';
+const URL = 'https://triforce-trivia.herokuapp.com';
 
 
 export async function signup(display_name, email, password) {
@@ -36,10 +36,18 @@ export async function logout() {
 
 export async function getTrivia() {
     const data = await request
-    .get(`${URL}/trivias`)
+    .get(`${URL}/zombies`)
     return data.body;
 }
 
-export function matchId(id) {
-    
+
+export async function getZombies() {
+    const data = await request
+    .get(`${URL}/zombies`)
+    return data.body;
 }
+
+
+
+
+

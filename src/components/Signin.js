@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { signin } from './Utils.js';
+import { signin } from '../Utils.js';
 import '../style/Sign.css'
 
 export default class Signin extends Component {

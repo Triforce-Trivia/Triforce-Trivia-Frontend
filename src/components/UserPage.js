@@ -6,7 +6,7 @@ class UserPage extends Component {
         return (
             <div>
                 <p>Name: {this.props.name}</p>
-                <p>Score: {this.props.score}</p>
+                <p>Score: {this.props.scores}</p>
                 <button>Home</button>
                 <button>Logout</button>
             </div>

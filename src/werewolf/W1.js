@@ -1,6 +1,6 @@
 import '../style/Werewolf.css';
 import React, { Component } from 'react';
-import { getTrivia } from '../components/Utils';
+import { getTrivia } from '../Utils';
 import  WDetailPage  from './WDetailPage.js'
 
 export default class W1 extends Component {

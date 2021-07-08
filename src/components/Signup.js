@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { signup } from './Utils.js';
+import { signup } from '../Utils.js';
 
 export default class Signup extends Component {
     state = {
