@@ -23,7 +23,7 @@ export default class Home extends Component {
                 <Link to="/signin"><div>Sign in</div></Link>
             </button>
             <button>
-                <Link to="/trivia"><div>Trivia</div></Link>
+                <Link to="/trivia"><div>Play As Guest</div></Link>
             </button>
             </div>
                 

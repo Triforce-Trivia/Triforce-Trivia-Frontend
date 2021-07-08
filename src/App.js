@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './style/App.css';
+import Header from './components/Header';
 import Signin from './components/Signin.js';
 import Signup from './components/Signup.js';
 import AboutUs from './components/About.js';
@@ -31,10 +32,7 @@ signin = (token) => {
 
       <div className="Nav">
         <Router>
-          <header>
-                    <h1>Triforce of Trivia</h1>
-                    <Link to="/">Home</Link>
-          </header> 
+        <Header />
           <Switch>
           <Route 
               exact path='/' 
