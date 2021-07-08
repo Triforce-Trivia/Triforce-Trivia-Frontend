@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../style/UserPage.css'
 
 class UserPage extends Component {
@@ -7,8 +8,7 @@ class UserPage extends Component {
             <div>
                 <p>Name: {this.props.name}</p>
                 <p>Score: {this.props.score}</p>
-                <button>Home</button>
-                <button>Logout</button>
+                <Link to="/">Home</Link>
             </div>
         )
     }
