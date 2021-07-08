@@ -4,6 +4,24 @@ body {
     background-color: black;
 }
 
-header {
-    color: white;
+h3 {
+    font-family: triforce;
+    font-size: 3.5em;
+    display: flex;
+    justify-self: flex-start;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+}
+
+.title-section {
+    display: flex;
+    justify-content: center;
+}
+
+.scooby-logo {
+    display: flex;
+    justify-content: center;
 }

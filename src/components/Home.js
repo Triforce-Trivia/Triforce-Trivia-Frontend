@@ -12,21 +12,29 @@ export default class Home extends Component {
             <div
             className="bk_Img"
             style={{
-            backgroundImage: "url(https://i.pinimg.com/originals/76/cb/02/76cb0257e5dd4d96a3cfb7aeaa532104.gif)",
-            backgroundSize: "stretch",
-            height: "100vh",
-            }}>
-            <button>
-                <Link to="/signup"><div>Sign up</div></Link>
-            </button>
-            <button>
-                <Link to="/signin"><div>Sign in</div></Link>
-            </button>
-            <button>
-                <Link to="/trivia"><div>Trivia</div></Link>
-            </button>
-            </div>
-                
+                backgroundImage: "url(https://i.pinimg.com/originals/76/cb/02/76cb0257e5dd4d96a3cfb7aeaa532104.gif)",
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: "stretch",
+                height: "100vh",
+                display: "flex",
+                justifyContent: "center"
+                    }}>                    
+                </div>
+                <section className="title-section">
+                        <img className="scooby-logo" src="../scoobydoo/scoobydoo_logo3.png" alt="scoobydoo-logo"></img>
+                        <h3>Triforce Trivia</h3>
+                    </section>
+                <div className="button-div">
+                        <button>
+                            <Link to="/signup"><div>Sign up</div></Link>
+                        </button>
+                        <button>
+                            <Link to="/signin"><div>Sign in</div></Link>
+                        </button>
+                        <button>
+                            <Link to="/trivia"><div>Play As Guest</div></Link>
+                                    </button>
+                    </div>
             </div>  
         )
     }
