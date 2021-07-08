@@ -8,7 +8,7 @@ export default class Header extends Component {
                 <div className="title-logo">
           <header>
             <img src="../logos/triforce-trivia-small3.png" alt="triforce-logo"></img>
-            <h1>Triforce of Trivia</h1>
+            {/* <h1>Triforce of Trivia</h1> */}
               <p className="home-link"><Link to="/">Home</Link></p>
               <p className="signin-link"><Link to="/signin">Sign In</Link></p>
               <p className="signup-link"><Link to="/signup">Sign Up</Link></p>
