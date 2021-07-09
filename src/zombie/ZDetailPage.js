@@ -8,7 +8,7 @@ class ZDetailPage extends Component {
             <div>
                 <Interweave content=
                 {
-                    this.props ?  this.propsquestion : null 
+                    this.props.q ?  this.props.q.question : null 
                 }
                 />
 
