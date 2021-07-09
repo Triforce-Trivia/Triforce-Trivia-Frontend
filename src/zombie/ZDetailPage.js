@@ -5,7 +5,7 @@ class ZDetailPage extends Component {
     render() {
         console.log(this.props.q)
         return (
-            <div>
+            <div className="jenkins">
                 <Interweave content=
                 {
                     this.props.q ?  this.props.q.question : null 
