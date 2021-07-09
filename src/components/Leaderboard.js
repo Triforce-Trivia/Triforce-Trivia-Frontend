@@ -1,16 +1,24 @@
 import React, { Component } from 'react'
 import '../style/Scoreboard.css';
+import { getLeaderBoard } from '../Utils';
 
 export default class Leaderboard extends Component {
-
-    // componentDidMount()
+    state = {
+        leaderboard: []
+    }
+    componentDidMount = async () => {
+        const leaderboard = await getLeaderBoard(this.props.token)
+        this.setState({leaderboard})
+    }
 
 
     render() {
         return (
             <div className="title-section">
                 <h1 className="scoreboard-title">Check Out Your Scores!</h1>
-                {/* table goes here */}
+                {this.state.leaderboard.map(item => 
+                    <p>{item.display_name}:{item.total_scores}</p>)}
+                
             </div>
         )
     }

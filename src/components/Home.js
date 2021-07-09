@@ -33,9 +33,9 @@ export default class Home extends Component {
                         <button>
                             <Link to="/signin"><div>Sign in</div></Link>
                         </button>
-                        <button>
+                        {/* <button>
                             <Link to="/trivia"><div>Play As Guest</div></Link>
-                        </button>
+                        </button> */}
                     </div>
                     </section>
                 </div>
