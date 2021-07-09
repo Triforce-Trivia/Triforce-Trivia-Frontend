@@ -10,7 +10,7 @@ class UserPage extends Component {
                 <p>Name: {this.props.name}</p>
                 <p>Score: {this.props.score}</p>
                 <button onClick={() => 
-                    this.props.postScores(this.props.token_key)} 
+                    this.props.postScores(this.props.token_key)}
                 >Post Score</button>
                 <Link to="/">Home</Link>
             </div>

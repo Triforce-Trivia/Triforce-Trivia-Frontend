@@ -11,6 +11,7 @@ class ZDetailPage extends Component {
                     this.props.q ?  this.props.q.question : null 
                 }
                 />
+
             </div>
         )
     }

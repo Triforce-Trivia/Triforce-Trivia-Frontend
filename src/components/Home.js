@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-
-
 import '../style/Home.css';
 
 export default class Home extends Component {
@@ -19,16 +17,16 @@ export default class Home extends Component {
                 justifyContent: "center"
                     }}>
                     <section className="title-section">
-                         <img className="scooby-logo" src="../scoobydoo/scoobydoo_logo3.png" alt="scoobydoo-logo"></img>
+                        <img className="scooby-logo" src="../scoobydoo/scoobydoo_logo3.png" alt="scoobydoo-logo"></img>
                         <h3 className="triforce-title">Triforce Trivia</h3>
                         <img className="the-gang" alt="scooby-gang" src="../scoobydoo/scooby-doo-1-logo.png"></img>
                         <div className="scary-char-div">
                             <img className="scary-characters" alt="scary-pirate" src="../scoobydoo/scooby_pirate.png"></img>
-                              <img className="scary-characters" alt="scary-clown" src="../scoobydoo/scary_clown.png"></img>
-                             <img className="scary-characters" alt="scary-ghoul" src="../scoobydoo/scooby_ghoul.png"></img>
+                            <img className="scary-characters" alt="scary-clown" src="../scoobydoo/scary_clown.png"></img>
+                            <img className="scary-characters" alt="scary-ghoul" src="../scoobydoo/scooby_ghoul.png"></img>
                             </div>
                         <div className="button-div">
-                             
+                            
                             <button>
                             <Link to="/signup"><div>Sign up</div></Link>
                         </button>
