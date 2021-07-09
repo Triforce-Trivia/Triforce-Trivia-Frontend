@@ -80,11 +80,16 @@ export default class Z1 extends Component {
                     overflow: "visible"
                 }}
                 >
+                
+                
+
+                <div className="jenkins">
                 <h2 className="current-score"> {this.state.scores} </h2> 
-                <h2 className="description">{this.state.description}</h2>
                 <h3 className="trivia-q">
                     <ZDetailPage q={this.state.questions[this.state.abs]} />
                 </h3>  
+                <h2 className="description">{this.state.description}</h2>
+                </div>
                 <div className='buttons'>  
                 
                     <button type="button">
