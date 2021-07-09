@@ -81,9 +81,9 @@ export default class Z1 extends Component {
                     overflow: "visible"
                 }}
                 >
-                <h2> {this.state.scores} </h2> 
-                <h2>{this.state.description}</h2>
-                <h3>
+                <h2 className="current-score"> {this.state.scores} </h2> 
+                <h2 className="description">{this.state.description}</h2>
+                <h3 className="trivia-q">
                     <ZDetailPage q={this.state.questions[this.state.abs]} />
                 </h3>  
                 <div className='buttons'>  

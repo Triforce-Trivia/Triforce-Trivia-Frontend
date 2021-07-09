@@ -31,3 +31,10 @@ header {
 .buttons {
     justify-content: center;
 }
+
+.trivia-q {
+    background-color: rgba(153, 205, 50, 0.612);
+    padding: 20px;
+    border-radius: 30px;
+    font-family: scoobydoo;
+}
