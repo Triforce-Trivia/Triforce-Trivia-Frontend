@@ -16,9 +16,9 @@ export default class AboutUs extends Component {
                 height: "400px",
                 }}>
                     <section className="dimitra-section">
-                        <a><h4 className="dimitra">
+                        <h4 className="dimitra">
                             Dimitra
-                        </h4></a>
+                        </h4>
                         <h3 className="dimitra-bio">
                             Dimitra is a Fullstack Software Engineer and is interested in creating apps and supporting companies, startups, etc. that have a mission-driven mindset to effect positive change in their local communities and abroad.
                             She is passionate about developing and providing solutions to everyday problems, and finding ways to give access to resources for those who are marginalized, overlooked, and discounted. It is her dream to use her coding experience to help people achieve their goals.
