@@ -1,7 +1,7 @@
 .scooby {
     position: absolute;
     left: 120px;
-    top: 435px;
+    top: 375px;
     color: purple;
     font-size: 20px;
 }
@@ -9,7 +9,7 @@
 .dimitra {
     position: absolute;
     left: 210px;
-    top: 405px;
+    top: 345px;
     color: purple;
     font-size: 20px;
 }
@@ -17,7 +17,7 @@
 .elise {
     position: absolute;
     left: 390px;
-    top: 415px;
+    top: 350px;
     color: purple;
     font-size: 20px;
 }
@@ -25,7 +25,7 @@
 .chen {
     position: absolute;
     left: 300px;
-    top: 405px;
+    top: 345px;
     color: purple;
     font-size: 20px;
 }
@@ -36,11 +36,22 @@
     cursor: help;
 }
 
-h2 {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding:5px;
-    color: turquoise;
+.aboutus {
+    display: grid;
+    grid-template-columns: 6;
+}
 
+.gang {
+    display: grid;
+    grid-column: 2;
+    margin-left: 30%;
+}
+
+.bk_Img {
+    grid-column: 1;
+
+}
+
+.sup {
+    font-family: triforce;
 }
