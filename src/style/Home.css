@@ -19,7 +19,7 @@
 
 .button-div {
     /* border: turquoise 2px solid; */
-    height: 25%;
+    height: auto;
     width: 500px;
     display: flex;
     justify-content: space-around;
@@ -42,7 +42,8 @@ button {
     border: #0081df solid 4px;
     border-radius: 12%;
     background-color: #d1ff4950;
-    width: 75%;
+    width: 900px;
+    height: 950px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -73,7 +74,7 @@ button {
 
 .scary-char-div {
     /* border: solid 3px white; */
-    height: 25%;
+    height: 20%;
     width: 500px;
     display: flex;
     justify-content: space-between;
