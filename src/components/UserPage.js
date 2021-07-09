@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/UserPage.css'
+import '../style/App.css'
+import '../style/Home.css'
 
 class UserPage extends Component {
     render() {
@@ -9,10 +11,10 @@ class UserPage extends Component {
             <div>
                 <p>Name: {this.props.name}</p>
                 <p>Score: {this.props.score}</p>
-                <button onClick={() => 
+                {/* <button onClick={() => 
                     this.props.postScores(this.props.token_key)}
-                >Post Score</button>
-                <Link to="/">Home</Link>
+                >Post Score</button> */}
+                <p className="home"><Link to="/">Home</Link></p>
             </div>
         )
     }
