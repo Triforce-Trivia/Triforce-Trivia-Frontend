@@ -18,9 +18,9 @@
   color: #61dafb;
 } */
 
-*{
+/* *{
     box-sizing: border-box;
-}
+} */
 
 html, body {
     height: 100%;
@@ -58,7 +58,7 @@ header {
 .logout-link {
   position: absolute;
   right: 200px;
-  top: 100px;
+  top: 130px;
 }
 
 .about-link {

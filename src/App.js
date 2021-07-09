@@ -71,7 +71,7 @@ import {
   return (
   <div className="Nav">
   <Router>
-    <Header />
+        <Header logout={this.logout} />
       <Switch>
           <Route 
               exact path='/' 
