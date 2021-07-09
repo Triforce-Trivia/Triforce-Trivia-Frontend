@@ -16,7 +16,8 @@ export default class Z1 extends Component {
             correct_answer: "",
             incorrect_answer: "", 
             gameNumber: 0, 
-            scores: 0 
+            scores: 0,
+            description: ""
         }
 
     componentDidMount = async() => {
