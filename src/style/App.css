@@ -65,13 +65,14 @@ header {
 .logout-link {
   position: absolute;
   right: 200px;
-  top: 130px;
+  top: 150px;
 }
 
 .about-link {
   position: absolute;
   right: 315px;
   top: 130px;
+
 }
 
 .userpage-link {
