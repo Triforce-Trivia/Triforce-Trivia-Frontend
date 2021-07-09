@@ -17,7 +17,7 @@ export default class Leaderboard extends Component {
             <div className="title-section">
                 <h1 className="scoreboard-title">Check Out Your Scores!</h1>
                 {this.state.leaderboard.map(item => 
-                    <p>{item.display_name}:{item.total_scores}</p>)}
+                    <p className="user">{item.display_name}: {item.total_scores}</p>)}
                 
             </div>
         )
