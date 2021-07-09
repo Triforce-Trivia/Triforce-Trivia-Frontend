@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import '../style/Trivia.css';
-import PopUp from './PopUp.js'
+import PopUp from './PopUp.js';
 
 export default class Trivia extends Component {
+    
     state = {
         seen: false
         };
+
     togglePop = () => {
         this.setState({
         seen: !this.state.seen
         });
     };
     render() {
-        console.log(this.props)
+        console.log(this.props.name)
         return (
             <div className="triv">
-                <h2>Welcome, {this.props.name}!</h2>
+                <h2>Hop in, {this.props.name}!</h2>
                 <div className="triforce">
                     <div className="z-container">
                         <button className="zombie" onClick={this.togglePop}>
