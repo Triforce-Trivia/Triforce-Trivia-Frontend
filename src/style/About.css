@@ -14,6 +14,16 @@
     left: 500px;
 }
 
+.hide {
+    display: none;
+     word-wrap: wrap;
+    width: 500px;
+    left: 500px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
 .elise {
     position: relative;
     color: magenta;
