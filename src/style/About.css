@@ -1,57 +1,50 @@
-.scooby {
-    position: absolute;
-    left: 120px;
-    top: 375px;
+.scooby-section, .dimitra-section, .elise-section, .chen-section {
     color: purple;
+    
     font-size: 20px;
+    font-family: scoobydoo;
 }
 
-.dimitra {
-    position: absolute;
-    left: 210px;
-    top: 345px;
-    color: purple;
-    font-size: 20px;
+.dimitra-bio, .chen-bio, .elise-bio, .scooby-bio {
+    color: transparent;
+    word-wrap: wrap;
+    width: 500px;
 }
 
 .elise {
-    position: absolute;
-    left: 390px;
-    top: 350px;
-    color: purple;
-    font-size: 20px;
+    position: relative;
+    color: magenta;
+    left: 400px;
+    bottom: 400px;
+    text-shadow: 10px 5px 10px black;
+}
+
+.scooby {
+    position: relative;
+    color: magenta;
+    left: 120px;
+    bottom: 510px;
+    text-shadow: 10px 5px 10px black;
 }
 
 .chen {
-    position: absolute;
-    left: 300px;
-    top: 345px;
-    color: purple;
-    font-size: 20px;
+    position: relative;
+    color: magenta;
+    left: 270px;
+    bottom: 310px;
+    text-shadow: 10px 5px 10px black;
 }
 
+.dimitra {
+    position: relative;
+    color: magenta;
+    left: 210px;
+    top: 190px;
+    text-shadow: 10px 5px 10px black;
+}
 
-.elise:hover, .chen:hover, .dimitra:hover, .scooby:hover {
-    color: rgb(0, 197, 232);
+.elise-bio:hover, .scooby-bio:hover, .chen-bio:hover, .dimitra-bio:hover, .elise-section:hover, .chen-section:hover, .dimitra-section:hover, .scooby-section:hover {
+    color: white;
     cursor: help;
-}
-
-.aboutus {
-    display: grid;
-    grid-template-columns: 6;
-}
-
-.gang {
-    display: grid;
-    grid-column: 2;
-    margin-left: 30%;
-}
-
-.bk_Img {
-    grid-column: 1;
-
-}
-
-.sup {
-    font-family: triforce;
+    text-shadow: 10px 5px 10px black;
 }

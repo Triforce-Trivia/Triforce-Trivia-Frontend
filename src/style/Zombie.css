@@ -21,3 +21,9 @@ header {
     background-color: blue;
 
 }
+
+.questions {
+    display: flex;
+    width: 1000px;
+
+}

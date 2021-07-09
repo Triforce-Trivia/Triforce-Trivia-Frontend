@@ -64,7 +64,7 @@ export default class Z1 extends Component {
         return (
         <div className="triv">
             <div>
-                <div 
+                <div className="questions"
                 style={{
                     backgroundImage: `url(${this.state.bgImage})`,
                     backgroundSize: "cover",
