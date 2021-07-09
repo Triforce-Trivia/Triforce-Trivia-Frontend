@@ -3,7 +3,7 @@ import Interweave from 'interweave';
 
 class WDetailPage extends Component {
     render() {
-        console.log(this.props)
+        console.log(this.props.q)
         return (
             <div>
                 <Interweave conrent=

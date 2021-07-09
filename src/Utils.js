@@ -55,9 +55,9 @@ export async function getWereWolves() {
 }
 
 
-export async function getUserScore() {
-    const data = await request
-        .get
-}
+// export async function getUserScore() {
+//     const data = await request
+//         .get
+// }
 
 

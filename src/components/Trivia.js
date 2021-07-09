@@ -5,9 +5,10 @@ import '../style/Trivia.css';
 export default class Trivia extends Component {
 
     render() {
+        console.log(this.props)
         return (
             <div className="triv">
-                <h2>Welcome, user!</h2>
+                <h2>Welcome, {this.props.name}!</h2>
                 <div className="triforce">
                     <div className="zombie"><Link to="/z1">Z</Link></div>
 
