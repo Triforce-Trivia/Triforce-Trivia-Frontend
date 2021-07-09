@@ -26,7 +26,6 @@ export default class Signin extends Component {
         }
     }
 
-
     render() {
         return (
             <div>
@@ -36,7 +35,7 @@ export default class Signin extends Component {
                         Email
                         <input 
                         name="email"
-                        type={this.state.email} 
+                        type="email" 
                         text="email"
                         onChange={this.handleChange}
                         />
@@ -45,7 +44,7 @@ export default class Signin extends Component {
                         Password
                         <input 
                         name="password"
-                        type={this.state.password}
+                        type="password"
                         text="password"
                         onChange={this.handleChange}
                         />

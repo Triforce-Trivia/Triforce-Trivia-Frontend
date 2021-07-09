@@ -31,7 +31,6 @@ export default class Z1 extends Component {
         })
     }
 
-
     handleClick = (e) => {
         if (this.state.questions.length - 1 === Math.abs(this.state.abs)) { 
             this.props.history.push('/userpage')
@@ -57,7 +56,6 @@ export default class Z1 extends Component {
             })
         }        
     }
-    
 
     render() {
         console.log(this.state.questions)

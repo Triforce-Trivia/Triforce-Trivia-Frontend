@@ -10,8 +10,8 @@ import Trivia from './components/Trivia.js';
 import GameOver from './components/GameOver';
 import Logout from './components/Logout';
 import Z1 from '../src/zombie/Z1.js';
-import A1 from '../src/alien/A1.js';
-import W1 from '../src/werewolf/W1.js';
+// import A1 from '../src/alien/A1.js';
+// import W1 from '../src/werewolf/W1.js';
 import request from 'superagent'
 import {
   BrowserRouter as Router,
@@ -54,7 +54,7 @@ import {
 
   // post request to the backend function
   postScores = async (token) => {
-   const data = await request
+  const data = await request
       // .post("https://triforce-trivia.herokuapp.com/api/scores")
       .post("https://triforce-trivia.herokuapp.com/api/userscores")
       .send({
@@ -147,7 +147,7 @@ import {
               signin={this.signin} getScores={this.getScores}
               {...routerProps}/>} 
           /> 
-
+{/* 
           <Route 
           exact path='/w1' 
             render={(routerProps) => <W1
@@ -160,7 +160,7 @@ import {
             render={(routerProps) => <A1
               signin={this.signin} getScores={this.getScores}
               {...routerProps}/>} 
-          />
+          /> */}
 
   
           </Switch>

@@ -6,10 +6,10 @@ export default class Header extends Component {
         return (
             <div>
                 <div className="title-logo">
-          <header>
+            <header>
                         <img className="triforce-logo" src="../logos/triforce-trivia-small3.png" alt="triforce-logo"></img>
                         <div className="nav-links">
-                             <p className="home-link"><Link to="/">Home</Link></p>
+                            <p className="home-link"><Link to="/">Home</Link></p>
                             <p className="signin-link"><Link to="/signin">Sign In</Link></p>
                             <p className="signup-link"><Link to="/signup">Sign Up</Link></p>
                             <p className="userpage-link"><Link to="/userpage">Scores</Link></p>
