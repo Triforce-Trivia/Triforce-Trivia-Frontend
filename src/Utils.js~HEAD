@@ -40,7 +40,6 @@ export async function getTrivia() {
     return data.body;
 }
 
-<<<<<<< HEAD:src/Utils.js
 
 export async function getZombies() {
     const data = await request
@@ -52,10 +51,3 @@ export async function getZombies() {
 
 
 
-=======
-// export async function quoteFix(questions) {
-//     const replaced = '"'
-//     const triviaquestions = questions.replace(/&quot;/g, replaced)
-//     return triviaquestions;
-// } 
->>>>>>> 7c358c2c241e1bacd2ed61db042f1456c1bd859c:src/components/Utils.js

@@ -68,7 +68,6 @@ import {
   <div className="Nav">
   <Router>
     <Header />
-    <button onClick={this.logout}>Logout</button>
       <Switch>
           <Route 
               exact path='/' 
@@ -133,9 +132,9 @@ import {
 
           <Route 
           exact path='/z1' 
-            render={(routerProps) => this.state.token ? <Z1
+            render={(routerProps) =>  <Z1
               signin={this.signin} getScores={this.getScores}
-              {...routerProps}/>: <Redirect to='/' />} 
+              {...routerProps}/>} 
           /> 
 
           <Route 
@@ -152,23 +151,10 @@ import {
               {...routerProps}/>} 
           />
 
-          {/* <Route 
-          exact path='/a1' 
-            render={(routerProps) => <A1
-              signin={this.signin} 
-              {...routerProps}/>} 
-          /> */}
-{/*           
-          <Route 
-          exact path='/w1' 
-            render={(routerProps) => <W1
-              signin={this.signin} 
-              {...routerProps}/>} 
-          />
-           */}
-      </Switch>
-       
-          <footer>
+  
+          </Switch>
+  
+          <footer className="footer">
             <Link to="/about">About Us</Link> 
           </footer>
 
