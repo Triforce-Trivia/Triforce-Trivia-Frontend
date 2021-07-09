@@ -8,7 +8,7 @@ import UserPage from './components/UserPage';
 import Home from './components/Home.js';
 import Trivia from './components/Trivia.js';
 import GameOver from './components/GameOver';
-import Logout from './components/Logout';
+import Logout from './components/Leaderboard';
 import Z1 from '../src/zombie/Z1.js';
 // import A1 from '../src/alien/A1.js';
 // import W1 from '../src/werewolf/W1.js';
@@ -20,6 +20,7 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
+import Leaderboard from './components/Leaderboard';
 
   export default class App extends Component {
     state = { 
@@ -103,6 +104,13 @@ import {
           <Route 
             exact path='/about'               
             render={(routerProps) => <AboutUs
+              signin={this.signin} 
+              {...routerProps}/>} 
+          />
+
+           <Route 
+            exact path='/leaderboard'               
+            render={(routerProps) => <Leaderboard
               signin={this.signin} 
               {...routerProps}/>} 
           />
