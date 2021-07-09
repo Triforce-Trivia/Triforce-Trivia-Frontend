@@ -11,6 +11,7 @@ export default class Trivia extends Component {
                 <div className="triforce">
                     <div className="zombie"><Link to="/z1">Z</Link></div>
 
+                    {/* <button className="werewolf"><Link to="/w1"><div>W</div></Link></button> */}
                     <button className="werewolf"><Link to="/w1"><div>W</div></Link></button>
 
                     <button className="alien"><Link to="/a1"><div>A</div></Link></button>

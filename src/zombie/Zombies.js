@@ -76,6 +76,34 @@ const zombies = [
         url: "https://i.imgur.com/0ljkW42.gif",
         description: "Mr. Jenkins, don't leave us! Please, just one... last... try..."
     }
+    // {
+    //     id: 2,
+    //     url: "https://i.imgur.com/KJGReKc.gif"
+    // },
+    // {
+    //     id: 3,
+    //     url: "https://i.imgur.com/JNVkKfY.gif"
+    // },
+    // {
+    //     id: 4,
+    //     url: "https://i.imgur.com/0ZkGkzU.gif"
+    // },
+    // {
+    //     id: 5,
+    //     url: "https://i.imgur.com/x0vezGB.gif"
+    // },
+    // {
+    //     id: 6,
+    //     url: "https://i.imgur.com/JQEOqrU.gif"
+    // },
+    // {
+    //     id: 7,
+    //     url: "https://i.imgur.com/djlsnsq.gif"
+    // },
+    // {
+    //     id: 8,
+    //     url: "https://i.imgur.com/sVAbgoX.gif"
+    // },  
     ];
     
     export default zombies
