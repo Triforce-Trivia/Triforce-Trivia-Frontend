@@ -34,7 +34,6 @@ const zombies = [
         url: "https://i.imgur.com/0n6VBH0.gif",
         description: "I think I can see something out there, but something seems different in the air..."
     },
-
     {
         id: 0,
         url: "https://i.imgur.com/pqfHf2s.gif",

@@ -54,6 +54,25 @@ export async function getWereWolves() {
     return data.body;
 }
 
+export async function createScore(token) {
+    const data = await request
+    .post(`${URL}/api/scores`)
+        .send({
+            display_name: "Jeep",
+            total_scores: 0,
+    })
+        .set("Authorization", token)
+    return data.body;
+}
 
+export async function updateScore(token, score, score_id) {
+    const data = await request
+    .put(`${URL}/api/scores/${score_id}`)
+        .send({
+            total_scores: score,
+    })
+        .set("Authorization", token)
+    return data.body;
+}
 
 

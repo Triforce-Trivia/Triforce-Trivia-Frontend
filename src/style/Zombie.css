@@ -25,6 +25,7 @@ header {
     padding: 20px;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px 35px 25px yellowgreen;
 }
 
 .buttons {

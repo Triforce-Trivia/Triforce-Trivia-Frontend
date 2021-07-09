@@ -108,7 +108,7 @@ import Leaderboard from './components/Leaderboard';
               {...routerProps}/>} 
           />
 
-           <Route 
+          <Route 
             exact path='/leaderboard'               
             render={(routerProps) => <Leaderboard
               signin={this.signin} 
@@ -152,6 +152,7 @@ import Leaderboard from './components/Leaderboard';
           <Route 
           exact path='/z1' 
             render={(routerProps) =>  <Z1
+              token={this.state.token}
               signin={this.signin} getScores={this.getScores}
               {...routerProps}/>} 
           /> 

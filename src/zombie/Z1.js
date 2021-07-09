@@ -1,6 +1,6 @@
 import '../style/Zombie.css';
 import React, { Component } from 'react';
-import { getZombies } from '../Utils';
+import { createScore, getZombies, updateScore } from '../Utils';
 import  ZDetailPage  from './ZDetailPage.js';
 import zombies from './Zombies.js';
 import zs from './BadZ'
@@ -25,18 +25,20 @@ export default class Z1 extends Component {
         }
 
     componentDidMount = async() => {
+        const game = await createScore(this.props.token);
         const triviaquestions = await getZombies();
         
         this.setState({
             questions: triviaquestions,
-            // description: ,
+            game_id: game.id,
             zombies,  
             zs,
             bgImage: "url(https://i.imgur.com/jIsHfiA.gif)"
         })
     }
 
-    handleClick = (e) => {
+    handleClick = async(e) => {
+        e.preventDefault();
         if (this.state.questions.length - 1 === Math.abs(this.state.abs)) { 
             this.props.history.push('/userpage')
         }
@@ -53,6 +55,7 @@ export default class Z1 extends Component {
                 abs: this.state.abs + 1, 
             })
             this.props.getScores(1)
+            await updateScore(this.props.token, this.state.scores + 1, this.state.game_id)
         } else {
             this.setState({
                 scores: this.state.scores - 1,
@@ -61,6 +64,7 @@ export default class Z1 extends Component {
                 abs: this.state.abs + 1, 
                 life: this.state.life - 1, 
             })
+            await updateScore(this.props.token, this.state.scores - 1, this.state.game_id)
         }        
     }
 
@@ -83,26 +87,33 @@ export default class Z1 extends Component {
                     <ZDetailPage q={this.state.questions[this.state.abs]} />
                 </h3>  
                 <div className='buttons'>  
-                <form>
-                    <label>
-                        True
-                        <input 
-                        type='radio'
-                        value='True'
-                        name='answers'
-                        onClick={this.handleClick}
+                
+                    <button type="button">
+                        <label>
+                            True
+                        </label>
+                        <input
+                            className="boo-butt" 
+                            type='radio'
+                            value='True'
+                            name='answers'
+                            onClick={this.handleClick}
                         />
-                    </label>
-                    <label>
-                        False
+                    </button>
+
+                    <button type="button">
+                        <label>
+                            False
+                        </label>
                         <input 
+                            className="boo-butt" 
                             type='radio'
                             value='False'
                             name='answers'
                             onClick={this.handleClick}
                         /> 
-                    </label>
-                </form>
+                    </button>
+
                 </div> 
             </div>
         </div>
