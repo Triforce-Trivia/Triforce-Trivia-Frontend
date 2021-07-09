@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import '../style/About.css';
-// import gang from './Us.js'
 
 export default class AboutUs extends Component {
 
     render() {
         return (
             <div className="aboutus">
+                <img className="gang" src="https://fontmeme.com/permalink/210708/7855ed604b6213110032cbf529a0cf59.png" alt="meet-the-gang"/>
                 <div
                 className="bk_Img"
                 style={{
@@ -52,7 +52,7 @@ export default class AboutUs extends Component {
                         </h3>
                     </section>
 
-                        <img className="gang" src="https://fontmeme.com/permalink/210708/7855ed604b6213110032cbf529a0cf59.png" alt="meet-the-gang"/>
+                        
                 </div>
             </div>
         )
