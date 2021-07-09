@@ -1,0 +1,23 @@
+.gameover {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(149, 255, 0, 0.637);
+    border-radius: 40px;
+    box-shadow: 5px 5px 45px 25px rgba(149, 255, 0, 0.637);
+    padding: 20px;
+}
+
+.end {
+    text-align: center;
+    font-family: scoobydoo;
+    font-size: 50px;
+    color: rgb(233, 140, 0);
+    text-shadow: 5px 15px 15px rgb(67, 3, 126);
+}
+
+.shaggy-gif {
+    border-radius: 40px;
+    box-shadow: 5px 10px 15px rgb(16, 3, 46);
+}
