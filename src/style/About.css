@@ -5,6 +5,8 @@
 }
 
 .dimitra-bio, .chen-bio, .elise-bio, .scooby-bio {
+    display: flex;
+    flex-direction: row;
     position: relative;
     color: transparent;
     word-wrap: wrap;
@@ -15,8 +17,8 @@
 .elise {
     position: relative;
     color: magenta;
-    left: 400px;
-    bottom: 400px;
+    left: 380px;
+    bottom: 447px;
     text-shadow: 10px 5px 10px black;
 }
 
@@ -24,15 +26,15 @@
     position: relative;
     color: magenta;
     left: 120px;
-    bottom: 510px;
+    bottom: 595px;
     text-shadow: 10px 5px 10px black;
 }
 
 .chen {
     position: relative;
     color: magenta;
-    left: 270px;
-    bottom: 310px;
+    left: 290px;
+    bottom: 220px;
     text-shadow: 10px 5px 10px black;
 }
 
@@ -40,20 +42,27 @@
     position: relative;
     color: magenta;
     left: 210px;
-    top: 190px;
+    top: 140px;
     text-shadow: 10px 5px 10px black;
 }
 
 .elise-bio:hover, .scooby-bio:hover, .chen-bio:hover, .dimitra-bio:hover, .elise-section:hover, .chen-section:hover, .dimitra-section:hover, .scooby-section:hover {
     color: white;
     cursor: help;
-    text-shadow: 10px 5px 10px black;
+    text-shadow: 10px 5px 10px rgb(0, 0, 0);
 }
 
 .gang {
     position: absolute;
     align-content: center;
     justify-content: center;
-    margin-right: 100px;
+    margin-right: 600px;
     margin-top: 300px;
+}
+
+.aboutus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

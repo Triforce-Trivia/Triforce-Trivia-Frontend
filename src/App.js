@@ -174,7 +174,7 @@ import Leaderboard from './components/Leaderboard';
           </Switch>
   
           <footer className="footer">
-            <Link to="/about">About Us</Link> 
+            <Link to="/about"></Link> 
           </footer>
 
         </Router>
