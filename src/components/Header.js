@@ -12,7 +12,7 @@ export default class Header extends Component {
                             <p className="home-link"><Link to="/">Home</Link></p>
                             <p className="signin-link"><Link to="/signin">Sign In</Link></p>
                             <p className="signup-link"><Link to="/signup">Sign Up</Link></p>
-                            <p className="userpage-link"><Link to="/userpage">Scores</Link></p>
+                            <p className="userpage-link"><Link to="/leaderboard">Scores</Link></p>
                             <p className="about-link"><Link to="/about">About Us</Link> </p>
                             <a href="/" onClick={this.props.logout} className="logout-link">Log Out </a>                           
                         </div>

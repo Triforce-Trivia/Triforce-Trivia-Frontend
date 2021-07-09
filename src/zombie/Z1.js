@@ -40,10 +40,10 @@ export default class Z1 extends Component {
     handleClick = async(e) => {
         e.preventDefault();
         if (this.state.questions.length - 1 === Math.abs(this.state.abs)) { 
-            this.props.history.push('/userpage')
+            this.props.history.push('/leaderboard')
         }
         if (this.state.life === 0) {
-            this.props.history.push('/gameover')
+            this.props.history.push('/leaderboard')
         }
 
         if (e.target.value === this.state.questions[this.state.abs].correct_answer) {

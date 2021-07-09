@@ -76,3 +76,9 @@ export async function updateScore(token, score, score_id) {
 }
 
 
+export async function getLeaderBoard(token) {
+    const data = await request
+        .get(`${URL}/api/allscores`)
+      .set("Authorization", token)
+    return data.body;
+}

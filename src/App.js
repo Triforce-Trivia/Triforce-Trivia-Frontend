@@ -111,7 +111,8 @@ import Leaderboard from './components/Leaderboard';
           <Route 
             exact path='/leaderboard'               
             render={(routerProps) => <Leaderboard
-              signin={this.signin} 
+              signin={this.signin}
+            token={this.state.token}
               {...routerProps}/>} 
           />
 
