@@ -11,8 +11,9 @@ export default class Home extends Component {
                 backgroundImage: "url(https://i.pinimg.com/originals/76/cb/02/76cb0257e5dd4d96a3cfb7aeaa532104.gif)",
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: "stretch",
-                backgroundPosition: "center top",
+                backgroundPosition: "center",
                 height: "100vh",
+                width: "1200px",
                 display: "flex",
                 justifyContent: "center"
                     }}>

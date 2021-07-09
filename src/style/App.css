@@ -34,8 +34,9 @@ html, body {
 } */
 
 header {
+  /* border: solid 3px purple; */
   height: 150px;
-  width: auto;
+  width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -46,11 +47,17 @@ header {
 
 .triforce-logo {
   /* border: solid 3px blanchedalmond; */
-  width: 650px;
+  width: 175px;
   height: auto;
+  margin: 0;
 }
 
+/* a {
+  border: solid 4px red
+} */
+
 .title-logo {
+  /* border: solid yellow 5px; */
   display: flex;
   padding: 10px;
 }
@@ -64,31 +71,31 @@ header {
 .about-link {
   position: absolute;
   right: 315px;
-  top: 100px;
+  top: 130px;
 }
 
 .userpage-link {
   position: absolute;
   right: 445px;
-  top: 100px;
+  top: 130px;
 }
 
 .signup-link {
   position: absolute;
   right: 540px;
-  top: 100px;
+  top: 130px;
 }
 
 .signin-link {
   position: absolute;
   right: 645px;
-  top: 100px;
+  top: 130px;
 }
 
 .home-link {
   position: absolute;
   right: 750px;
-  top: 100px;
+  top: 130px;
 } 
 
 .footer {
