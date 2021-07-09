@@ -1,10 +1,10 @@
 .Nav  {
     /* border: peachpuff 4px solid; */
     display: grid;
-    grid-template-areas: 125px 1fr 100px / 1fr 1fr 1fr 1fr;
+    /* grid-template-areas: 125px 1fr 100px / 1fr 1fr 1fr 1fr; */
     background-color: black;
     height: 100%;
-    width: auto;
+    width: 100%;
 }
 
 .triforce-title {

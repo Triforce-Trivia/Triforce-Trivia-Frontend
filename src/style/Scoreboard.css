@@ -1,0 +1,32 @@
+
+
+.scoreboard-title {
+        /* border: yellow solid 2px; */
+    font-family: triforce;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0;
+    margin-top: -10px;
+    height: 150px;
+}
+
+.footer {
+  /* border: solid turquoise 3px; */
+  font-family: triforce;
+  font-size: 2rem;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-section {
+    border: #0081df solid 4px;
+    border-radius: 12%;
+    background-color: #d1ff4950;
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
