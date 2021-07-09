@@ -3,7 +3,7 @@ import Interweave from 'interweave';
 
 class ZDetailPage extends Component {
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <div>
                 <Interweave content=

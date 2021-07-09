@@ -1,6 +1,6 @@
 import '../style/Alien.css';
 import React, { Component } from 'react';
-import { getTrivia } from '../components/Utils';
+import { getTrivia} from '../Utils';
 import  ADetailPage  from './ADetailPage.js'
 
 export default class A1 extends Component {

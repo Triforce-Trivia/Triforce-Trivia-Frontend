@@ -38,6 +38,9 @@ export default class Home extends Component {
                         <button>
                             <Link to="/trivia"><div>Play As Guest</div></Link>
                         </button>
+                        <button onClick={this.logout}>
+                            Logout
+                        </button>
                     </div>
                     </section>
                 </div>

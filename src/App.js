@@ -7,10 +7,12 @@ import AboutUs from './components/About.js';
 import UserPage from './components/UserPage';
 import Home from './components/Home.js';
 import Trivia from './components/Trivia.js';
+import GameOver from './components/GameOver';
+import Logout from './components/Logout';
 import Z1 from '../src/zombie/Z1.js';
 import A1 from '../src/alien/A1.js';
 import W1 from '../src/werewolf/W1.js';
-
+import request from 'superagent'
 import {
   BrowserRouter as Router,
   Route,
@@ -19,89 +21,139 @@ import {
   Redirect
 } from "react-router-dom";
 
-export default class App extends Component {
-  state = { token: localStorage.getItem('TOKEN') }
+  export default class App extends Component {
+    state = { 
+      token: localStorage.getItem('TOKEN'), 
+      scores: 0, 
+      display_name: ''
+    }
 
-signin = (token) => {
-  this.setState({ token })
-  localStorage.setItem('TOKEN', token)
-}
+  signin = (token) => {
+    this.setState({ token })
+    localStorage.setItem('TOKEN', token)
+  }
+
+  logout = () => {
+    this.setState({token: ''})
+    localStorage.setItem('TOKEN', '')
+  }
+
+  getScores = (newScores) => {
+    this.setState((prevScores) => { 
+      return {scores: prevScores.scores + newScores}
+    })
+  }
+
+  setUserName = (display_name) => {
+    this.setState({display_name: display_name})
+  }
+
+  // post request to the backend function
+  postScores = async (token) => {
+   const data = await request
+      // .post("https://triforce-trivia.herokuapp.com/api/scores")
+      .post("https://triforce-trivia.herokuapp.com/api/scores")
+      .send({
+        display_name: 'test-user', 
+        total_scores: this.state.scores,
+      })
+      .set('Authorization', token)
+
+    console.log(data.body)
+  }
 
   render() {
-    return (
-
-      <div className="Nav">
-        <Router>
-        <Header />
-          <Switch>
+  console.log(this.state.display_name)
+  return (
+  <div className="Nav">
+  <Router>
+    <Header />
+      <Switch>
           <Route 
               exact path='/' 
                 render={(routerProps) => <Home
                   signin={this.signin} 
                   {...routerProps}/>} 
-                />
+          />
           <Route 
             exact path='/signin' 
               render={(routerProps) => <Signin
                 signin={this.signin} 
                 {...routerProps}/>} 
-              />
+          />
           <Route 
             exact path='/signup' 
               render={(routerProps) => <Signup
                 signin={this.signin} 
+                setUserName={this.setUserName}
                 {...routerProps}/>} 
-              />
+          />
+          <Route 
+            exact path='/logout' 
+              render={(routerProps) => <Logout
+                signin={this.logout} 
+                {...routerProps}/>} 
+          />
           <Route 
             exact path='/about'               
             render={(routerProps) => <AboutUs
               signin={this.signin} 
               {...routerProps}/>} 
-              />
+          />
           <Route 
             exact path='/trivia' 
-            render={(routerProps) => <Trivia
-              signin={this.signin} 
-              {...routerProps}/>} 
-              />
-              
+            render={(routerProps) => 
+              <Trivia
+                signin={this.signin} 
+                {...routerProps}/>} 
+          />
           <Route 
-            exact path='/userpage'
-            render={(routerProps) => this.state.token ? <UserPage
+            path='/userpage'
+            exact 
+            render={(routerProps) => 
+              this.state.token ? 
+              <UserPage
+                {...routerProps}
+                token_key={this.state.token} 
+                score={this.state.scores} 
+                name={this.state.display_name}
+                postScores={this.postScores} 
+              />
+                : 
+                <Redirect to='/' />} 
+          /> 
+          
+          <Route 
+            exact path='/gameover'
+            render={(routerProps) => this.state.token ? <GameOver
               signin={this.signin} 
-              {...routerProps}/>: <Redirect to='/' />} /> 
-  
+              {...routerProps}/>: <Redirect to='/' />} 
+          /> 
+
           <Route 
           exact path='/z1' 
-            render={(routerProps) => this.state.token ? <Z1
-              signin={this.signin} 
-              {...routerProps}/>: <Redirect to='/' />} /> 
-            <Route 
-          exact path='/a1' 
-            render={(routerProps) => <A1
-              signin={this.signin} 
+            render={(routerProps) =>  <Z1
+              signin={this.signin} getScores={this.getScores}
               {...routerProps}/>} 
-            />
-            <Route 
-          exact path='/w1' 
-            render={(routerProps) => <W1
-              signin={this.signin} 
-              {...routerProps}/>} 
-            />
-            <Route 
-          exact path='/a1' 
-            render={(routerProps) => <A1
-              signin={this.signin} 
-              {...routerProps}/>} 
-            />
-            <Route 
-          exact path='/w1' 
-            render={(routerProps) => <W1
-              signin={this.signin} 
-              {...routerProps}/>} 
-            />
-          </Switch>
+          /> 
 
+          <Route 
+          exact path='/w1' 
+            render={(routerProps) => <W1
+              signin={this.signin} getScores={this.getScores}
+              {...routerProps}/>} 
+          />
+          
+          <Route 
+          exact path='/a1' 
+            render={(routerProps) => <A1
+              signin={this.signin} getScores={this.getScores}
+              {...routerProps}/>} 
+          />
+
+  
+          </Switch>
+  
           <footer className="footer">
             <Link to="/about">About Us</Link> 
           </footer>

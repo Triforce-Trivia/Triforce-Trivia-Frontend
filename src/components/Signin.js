@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { signin } from './Utils.js';
+import { signin } from '../Utils.js';
 import '../style/Sign.css'
 
 export default class Signin extends Component {
@@ -18,7 +18,7 @@ export default class Signin extends Component {
         try {
         const token = await signin(this.state.email, this.state.password);
         this.props.signin(token)
-        this.props.history.push('/trivia')
+        this.props.history.push('/userpage')
         } catch (e) {
             console.log(e.message)
         }
