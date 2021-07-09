@@ -76,7 +76,8 @@ export default class Z1 extends Component {
                 <h2> {this.state.scores} </h2> 
                 <h3>
                     <ZDetailPage q={this.state.questions[this.state.abs]} />
-                </h3>     
+                </h3>  
+                <div className='buttons'>  
                 <form>
                     <label>
                         True
@@ -97,7 +98,7 @@ export default class Z1 extends Component {
                         /> 
                     </label>
                 </form>
-
+                </div> 
             </div>
         </div>
     </div>

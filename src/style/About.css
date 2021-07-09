@@ -1,14 +1,15 @@
 .scooby-section, .dimitra-section, .elise-section, .chen-section {
     color: purple;
-    
     font-size: 20px;
     font-family: scoobydoo;
 }
 
 .dimitra-bio, .chen-bio, .elise-bio, .scooby-bio {
+    position: relative;
     color: transparent;
     word-wrap: wrap;
     width: 500px;
+    left: 500px;
 }
 
 .elise {
@@ -47,4 +48,12 @@
     color: white;
     cursor: help;
     text-shadow: 10px 5px 10px black;
+}
+
+.gang {
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    margin-right: 100px;
+    margin-top: 300px;
 }

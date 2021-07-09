@@ -4,7 +4,6 @@ body {
     background-color: black;
     color: black;
     align-items: center;
-    
 }
 
 header {
@@ -13,17 +12,18 @@ header {
 
 .triv {
     color: white;
-}
-
-.freddy {
-    display: flex;
-    flex-direction: row;
-    background-color: blue;
-
+    text-align: center;
+    margin: 40px;
 }
 
 .questions {
     display: flex;
     width: 1000px;
+    border: 15px double purple;
+    border-radius: 20px;
+    padding: 20px;
+}
 
+.buttons {
+    justify-content: center;
 }
