@@ -2,22 +2,23 @@ import '../style/Werewolf.css';
 import React, { Component } from 'react';
 import { getWereWolves } from '../Utils';
 import  WDetailPage  from './WDetailPage.js';
-
-export default class Z1 extends Component {
+import wereWolves from './Werewolves';
+import were from './Were2'
+export default class W1 extends Component {
         state = {
 
-            // bgImage: "https://i.imgur.com/jIsHfiA.gif",
-            // backgroundSize: "cover",
-            // height: "600px",
-            // backgroundRepeat: "no-repeat",
-            // wereWolves, 
-            // zs,
+            bgImage: "https://i.imgur.com/KDBaTxn.gif",
+            backgroundSize: "cover",
+            height: "600px",
+            backgroundRepeat: "no-repeat",
+            wereWolves, 
+            were,
             questions: [],
             correct_answer: "",
             incorrect_answer: "", 
             scores: 0, 
             abs: 0, 
-            life: 3, 
+            life: 5, 
         }
 
     componentDidMount = async() => {
@@ -25,9 +26,9 @@ export default class Z1 extends Component {
         
         this.setState({
             questions: triviaquestions,
-            // zombies,  
-            // zs,
-            // bgImage: "url(https://i.imgur.com/jIsHfiA.gif)"
+            wereWolves, 
+            were,
+            bgImage: "url(https://i.imgur.com/KDBaTxn.gif)"
         })
     }
 
@@ -44,14 +45,14 @@ export default class Z1 extends Component {
         if (e.target.value === this.state.questions[this.state.abs].correct_answer) {
             this.setState({
                 scores: this.state.scores + 1,
-                // bgImage: `${this.state.zombies[Math.abs(this.state.scores)].url}`,
+                bgImage: `${this.state.wereWolves[Math.abs(this.state.scores)].url}`,
                 abs: this.state.abs + 1, 
             })
             this.props.getScores(1)
         } else {
             this.setState({
                 scores: this.state.scores - 1,
-                // bgImage: `${this.state.zs[Math.abs(this.state.scores)].url}`,
+                bgImage: `${this.state.were[Math.abs(this.state.scores)].url}`,
                 abs: this.state.abs + 1, 
                 life: this.state.life - 1, 
             })
@@ -70,11 +71,11 @@ export default class Z1 extends Component {
             <div>
                 <div 
                 style={{
-                    // backgroundImage: `url(${this.state.bgImage})`,
-                    // backgroundSize: "cover",
-                    // height: "600px",
-                    // backgroundRepeat: "no-repeat",
-                    // overflow: "visible"
+                    backgroundImage: `url(${this.state.bgImage})`,
+                    backgroundSize: "cover",
+                    height: "600px",
+                    backgroundRepeat: "no-repeat",
+                    overflow: "visible"
                 }}
                 >
                 <h2> {this.state.scores} </h2> 

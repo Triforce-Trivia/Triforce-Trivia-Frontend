@@ -4,6 +4,7 @@ import '../style/Sign.css'
 
 export default class Signin extends Component {
     state = {
+        display_name: '',
         email: '',
         password: ''
     }
@@ -11,14 +12,15 @@ export default class Signin extends Component {
     handleChange = (e) => {
         const {name, value} = e.target
         this.setState({ [name]: value })
+        // this.props.setuserName(this.state.display_name)
     }
 
     handleSubmit = async e => {
         e.preventDefault();
         try {
-        const token = await signin(this.state.email, this.state.password);
-        this.props.signin(token)
-        this.props.history.push('/userpage')
+            const token = await signin(this.state.email, this.state.password);
+            this.props.signin(token)
+            this.props.history.push('/trivia')
         } catch (e) {
             console.log(e.message)
         }

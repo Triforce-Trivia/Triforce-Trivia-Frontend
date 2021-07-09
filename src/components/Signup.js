@@ -19,7 +19,7 @@ export default class Signup extends Component {
         try {
             const token = await signup(this.state.display_name, this.state.email, this.state.password)
             this.props.signin(token)
-            this.props.history.push('/userpage')
+            this.props.history.push('/trivia')
         } catch (e) {
             console.log(e.message)
         }

@@ -17,7 +17,7 @@ export default class Z1 extends Component {
             zombies, 
             zs,
             abs: 0, 
-            life: 3, 
+            life: 5, 
         }
 
     componentDidMount = async() => {
@@ -64,7 +64,6 @@ export default class Z1 extends Component {
         return (
         <div className="triv">
             <div>
-                
                 <div 
                 style={{
                     backgroundImage: `url(${this.state.bgImage})`,
@@ -76,9 +75,6 @@ export default class Z1 extends Component {
                 >
                 <h2> {this.state.scores} </h2> 
                 <h3>
-                    {/* <ZDetailPage q={this.state.questions[Math.abs(this.state.gameNumber)]} />
-                </h3>   
-                <form onSubmit={this.onSubmit}> */}
                     <ZDetailPage q={this.state.questions[this.state.abs]} />
                 </h3>     
                 <form>

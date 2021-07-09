@@ -48,13 +48,17 @@ import {
     this.setState({display_name: display_name})
   }
 
+  // setuserName = (display_name) => {
+  //   this.setState({display_name: display_name})
+  // }
+
   // post request to the backend function
   postScores = async (token) => {
   const data = await request
       // .post("https://triforce-trivia.herokuapp.com/api/scores")
-      .post("https://triforce-trivia.herokuapp.com/api/scores")
+      .post("https://triforce-trivia.herokuapp.com/api/userscores")
       .send({
-        display_name: 'test-user', 
+        display_name: 'this.state.display_name', 
         total_scores: this.state.scores,
       })
       .set('Authorization', token)
@@ -79,6 +83,7 @@ import {
             exact path='/signin' 
               render={(routerProps) => <Signin
                 signin={this.signin} 
+                // setuserName={this.setuserName}
                 {...routerProps}/>} 
           />
           <Route 
@@ -94,19 +99,25 @@ import {
                 signin={this.logout} 
                 {...routerProps}/>} 
           />
+
           <Route 
             exact path='/about'               
             render={(routerProps) => <AboutUs
               signin={this.signin} 
               {...routerProps}/>} 
           />
+
           <Route 
-            exact path='/trivia' 
+            path='/trivia' 
+            exact
             render={(routerProps) => 
               <Trivia
+                {...routerProps} 
                 signin={this.signin} 
-                {...routerProps}/>} 
-          />
+                name={this.state.display_name}
+            />} 
+          /> 
+
           <Route 
             path='/userpage'
             exact 
