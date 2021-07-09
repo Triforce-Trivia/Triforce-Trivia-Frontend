@@ -47,11 +47,10 @@ export default class Z1 extends Component {
         }
 
         if (e.target.value === this.state.questions[this.state.abs].correct_answer) {
-            console.log(this.state.scores + 1, this.state.zombies[Math.abs(this.state.scores + 1)])
             this.setState({
                 scores: this.state.scores + 1,
-                bgImage: `${this.state.zombies[Math.abs(this.state.scores + 1)].url}`,
-                description: `${this.state.zombies[Math.abs(this.state.scores + 1)].description}`,
+                bgImage: `${this.state.zombies[Math.abs(this.state.scores)].url}`,
+                description: `${this.state.zombies[Math.abs(this.state.scores)].description}`,
                 abs: this.state.abs + 1, 
             })
             this.props.getScores(1)
