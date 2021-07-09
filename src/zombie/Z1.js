@@ -1,9 +1,12 @@
 import '../style/Zombie.css';
 import React, { Component } from 'react';
-import { getZombies } from '../Utils';
+import { createScore, getZombies, updateScore } from '../Utils';
 import  ZDetailPage  from './ZDetailPage.js';
 import zombies from './Zombies.js';
 import zs from './BadZ'
+
+zombies.reverse()
+
 export default class Z1 extends Component {
         state = {
             bgImage: "https://i.imgur.com/jIsHfiA.gif",
@@ -13,54 +16,59 @@ export default class Z1 extends Component {
             questions: [],
             correct_answer: "",
             incorrect_answer: "", 
-            scores: 0, 
-            zombies, 
+            scores: 0,
+            description: "", 
+            zombies,
             zs,
             abs: 0, 
             life: 5, 
         }
 
     componentDidMount = async() => {
+        const game = await createScore(this.props.token);
         const triviaquestions = await getZombies();
         
         this.setState({
             questions: triviaquestions,
+            game_id: game.id,
             zombies,  
             zs,
             bgImage: "url(https://i.imgur.com/jIsHfiA.gif)"
         })
     }
 
-    handleClick = (e) => {
+    handleClick = async(e) => {
+        e.preventDefault();
         if (this.state.questions.length - 1 === Math.abs(this.state.abs)) { 
             this.props.history.push('/userpage')
         }
         if (this.state.life === 0) {
             this.props.history.push('/gameover')
         }
-        console.log(e.target.value, this.state.questions[this.state.abs])
 
         if (e.target.value === this.state.questions[this.state.abs].correct_answer) {
+            console.log(this.state.scores + 1, this.state.zombies[Math.abs(this.state.scores + 1)])
             this.setState({
                 scores: this.state.scores + 1,
-                bgImage: `${this.state.zombies[Math.abs(this.state.scores)].url}`,
+                bgImage: `${this.state.zombies[Math.abs(this.state.scores + 1)].url}`,
+                description: `${this.state.zombies[Math.abs(this.state.scores + 1)].description}`,
                 abs: this.state.abs + 1, 
             })
             this.props.getScores(1)
+            await updateScore(this.props.token, this.state.scores + 1, this.state.game_id)
         } else {
             this.setState({
                 scores: this.state.scores - 1,
-                bgImage: `${this.state.zs[Math.abs(this.state.scores)].url}`,
+                bgImage: `${this.state.zs[Math.abs(this.state.scores - 1)].url}`,
+                description: `${this.state.zs[Math.abs(this.state.scores - 1)].description}`,
                 abs: this.state.abs + 1, 
                 life: this.state.life - 1, 
             })
+            await updateScore(this.props.token, this.state.scores - 1, this.state.game_id)
         }        
     }
 
     render() {
-        console.log(this.state.questions)
-        console.log(this.state.questions[this.state.abs])
-        console.log(this.state.scores)
         return (
         <div className="triv">
             <div>
@@ -74,30 +82,38 @@ export default class Z1 extends Component {
                 }}
                 >
                 <h2> {this.state.scores} </h2> 
+                <h2>{this.state.description}</h2>
                 <h3>
                     <ZDetailPage q={this.state.questions[this.state.abs]} />
                 </h3>  
                 <div className='buttons'>  
-                <form>
-                    <label>
-                        True
-                        <input 
-                        type='radio'
-                        value='True'
-                        name='answers'
-                        onClick={this.handleClick}
+                
+                    <button type="button">
+                        <label>
+                            True
+                        </label>
+                        <input
+                            className="boo-butt" 
+                            type='radio'
+                            value='True'
+                            name='answers'
+                            onClick={this.handleClick}
                         />
-                    </label>
-                    <label>
-                        False
+                    </button>
+
+                    <button type="button">
+                        <label>
+                            False
+                        </label>
                         <input 
+                            className="boo-butt" 
                             type='radio'
                             value='False'
                             name='answers'
                             onClick={this.handleClick}
                         /> 
-                    </label>
-                </form>
+                    </button>
+
                 </div> 
             </div>
         </div>

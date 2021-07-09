@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import '../style/Scoreboard.css';
 
 export default class Leaderboard extends Component {
+
+    // componentDidMount()
+
+
     render() {
         return (
             <div className="title-section">
