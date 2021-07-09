@@ -76,8 +76,6 @@ export default class Z1 extends Component {
                 <h3>
                     <ZDetailPage q={this.state.questions[Math.abs(this.state.gameNumber)]} />
                 </h3>   
-                <div>
-                </div> 
                 <form onSubmit={this.onSubmit}>
                     <label>
                         True
