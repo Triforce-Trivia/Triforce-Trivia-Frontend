@@ -1,3 +1,4 @@
+// this file name shouldn't be capitalized--that implies there's a component inside
 const z = [
     {
         id: 1,

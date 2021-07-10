@@ -7,6 +7,7 @@ import zs from './BadZ'
 
 zombies.reverse()
 
+// for maintainability, I would like to see a more descriptive name for this component, like ZombieQuiz
 export default class Z1 extends Component {
         state = {
             bgImage: "https://i.imgur.com/jIsHfiA.gif",
@@ -37,29 +38,38 @@ export default class Z1 extends Component {
         })
     }
 
+    getCurrentQuestion() {
+        return this.state.questions[this.state.abs]
+    }
+
     handleClick = async(e) => {
         e.preventDefault();
-        if (this.state.questions.length - 1 === Math.abs(this.state.abs)) { 
-            this.props.history.push('/leaderboard')
-        }
-        if (this.state.life === 0) {
+
+        if (
+            this.state.questions.length - 1 === Math.abs(this.state.abs) 
+        || this.state.life === 0
+        ) { 
             this.props.history.push('/leaderboard')
         }
 
-        if (e.target.value === this.state.questions[this.state.abs].correct_answer) {
+        const isCorrect = e.target.value === this.getCurrentQuestion().correct_answer;
+
+        if (isCorrect) {
+            const next = this.state.zombies[Math.abs(this.state.scores)];
             this.setState({
                 scores: this.state.scores + 1,
-                bgImage: `${this.state.zombies[Math.abs(this.state.scores)].url}`,
-                description: `${this.state.zombies[Math.abs(this.state.scores)].description}`,
+                bgImage: `${next.url}`,
+                description: `${next.description}`,
                 abs: this.state.abs + 1, 
             })
             this.props.getScores(1)
             await updateScore(this.props.token, this.state.scores + 1, this.state.game_id)
         } else {
+            const prev = this.state.zs[Math.abs(this.state.scores - 1)]
             this.setState({
                 scores: this.state.scores - 1,
-                bgImage: `${this.state.zs[Math.abs(this.state.scores - 1)].url}`,
-                description: `${this.state.zs[Math.abs(this.state.scores - 1)].description}`,
+                bgImage: `${prev.url}`,
+                description: `${prev.description}`,
                 abs: this.state.abs + 1, 
                 life: this.state.life - 1, 
             })
@@ -86,7 +96,7 @@ export default class Z1 extends Component {
                 <div className="jenkins">
                 <h2 className="current-score"> {this.state.scores} </h2> 
                 <h3 className="trivia-q">
-                    <ZDetailPage q={this.state.questions[this.state.abs]} />
+                    <ZDetailPage q={this.getCurrentQuestion()} />
                 </h3>  
                 <h2 className="description">{this.state.description}</h2>
                 </div>

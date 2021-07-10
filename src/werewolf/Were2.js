@@ -1,5 +1,6 @@
 const w = [
     {
+        // a shame these gifs didn't get to be in the first draft!
         id: 0,
         url: "https://i.imgur.com/aTs66Jy.gif"
     },
