@@ -22,6 +22,7 @@ export default class Trivia extends Component {
                 <div className="triforce">
                     <div className="z-container">
                         <button className="zombie" onClick={this.togglePop}>
+                            {/* nice idea for toggling the popup state */}
                             {this.state.seen ? <PopUp toggle={this.togglePop} /> : null}
                         </button>
                     </div>
